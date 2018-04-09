@@ -29,6 +29,8 @@
 +(UIColor *)devicesListValueTextColor;
 +(UIColor *)devicesListSeparatorColor;
 +(UIColor *)deviceListControllerBackgroundColor;
++(UIColor *)devicesListCellTopViewBackgroundColor;
++(UIColor *)devicesListCellBottomViewBackgroundColor;
 
 #pragma conversation
 +(UIColor *)conversationInputViewTextViewBackgroundColor;

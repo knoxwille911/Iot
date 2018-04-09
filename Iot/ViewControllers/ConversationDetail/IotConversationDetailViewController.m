@@ -12,7 +12,7 @@
 #import "IotInjectorContainer.h"
 #import "UIColor+SPColors.h"
 
-@interface IotConversationDetailViewController ()<IotConversationInputViewDelegate> {
+@interface IotConversationDetailViewController ()<IotConversationInputViewDelegate, IotSpeechRecognizerDelegate> {
     IotConversationInputViewModel *_inputViewModel;
 }
 
@@ -24,6 +24,7 @@
     [super viewDidLoad];
     
     self.title = NSLocalizedString(@"Ella", @"Ella");
+    injectorContainer().speechRecognizerController.delegate = self;
     [self addInputBar];
 }
 
@@ -37,8 +38,12 @@
 }
 
 
+#pragma mark IotConversationInputViewDelegate delegate
+
 -(void)sendTextMessage:(NSString *)textMessage {
-    
+    [injectorContainer().serverProvider getConversationAnswerForQuestion:textMessage withCompletion:^(NSArray<MTLModel *> *objects) {
+        
+    }];
 }
 
 
@@ -49,6 +54,13 @@
 
 -(void)sendButtonLongTapEnded {
     [injectorContainer().speechRecognizerController stopListening];
+}
+
+
+#pragma mark IotSpeechRecognizerDelegate delegate
+
+-(void)recognizedTextUpdated:(NSString *)recognizedText {
+    
 }
 
 @end

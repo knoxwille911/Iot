@@ -20,6 +20,8 @@
 
 @implementation IotSpeechRecognizer
 
+@synthesize delegate = _delegate;
+
 - (instancetype)initWithInjection:(id<IotSpeechRecognizerInjection>)injection {
     if (self = [super init]) {
         _speechRecognizer = [[SFSpeechRecognizer alloc] initWithLocale:[[NSLocale alloc] initWithLocaleIdentifier:@"en_US"]];
@@ -88,6 +90,10 @@
             [inputNode removeTapOnBus:0];
             _recognitionRequest = nil;
             _recognitionTask = nil;
+        }
+        
+        if (self.delegate) {
+            [self.delegate recognizedTextUpdated:result.bestTranscription.formattedString];
         }
     }];
     

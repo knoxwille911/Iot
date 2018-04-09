@@ -12,6 +12,7 @@
 #import "IotWrapperDTO.h"
 #import "IotXDKDTO.h"
 #import "IotBulbDTO.h"
+#import "IotConversationAnswerOutDTO.h"
 
 static const BOOL kIotUseOfflineDevicesList = NO;
 
@@ -191,10 +192,14 @@ static const NSString *kIotServerProviderConversationQuestionKey  = @"q";
 }
 
 
--(void)getConversationAnswerForQuestion:(NSString *)question {
-    NSDictionary *params = [NSDictionary dictionaryWithObjectsAndKeys:kIotServerProviderConversationQuestionKey, question, nil];
-    [self.injection.networkController postAsFormData:[IotEndpoints getConversationAnswerEndpoint] withParams:params shouldIncludeAuthToken:YES withCompletionHandler:^(NSObject *response, NSError *error) {
-        
+-(void)getConversationAnswerForQuestion:(NSString *)question withCompletion:(IotServerProviderProtocolObjectsCompletionHandler)completion {
+    NSDictionary *params = [NSDictionary dictionaryWithObjectsAndKeys:question, kIotServerProviderConversationQuestionKey, nil];
+    [self.injection.networkController get:[IotEndpoints getConversationAnswerEndpoint] withParams:params shouldIncludeAuthToken:YES withCompletionHandler:^(NSObject *response, NSError *error) {
+        NSError *parseError;
+        IotConversationAnswerOutDTO *answerDTO = [MTLJSONAdapter modelOfClass:[IotConversationAnswerOutDTO class] fromJSONDictionary:(NSDictionary *)response error:&parseError];
+        if (answerDTO && completion) {
+            completion(@[answerDTO]);
+        }
     }];
 }
 

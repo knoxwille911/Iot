@@ -119,6 +119,7 @@ static CGFloat kConversationInputViewHeight = 44;
             self.sendButtonEnable = YES;
         });
         if (self.messageText.length) {
+            [self.delegate sendTextMessage:self.inputView.textView.text];
 //            [_delegate sendTextMessage:[_injection.emoticonsManager detectEmoticonsByByHashAndReplaceToCodes:self.messageText]];
             self.messageText = nil;
             self.messageText = [[NSMutableAttributedString alloc] init];

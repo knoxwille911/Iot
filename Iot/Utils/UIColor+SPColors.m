@@ -87,6 +87,15 @@
 }
 
 
++(UIColor *)devicesListCellTopViewBackgroundColor {
+    return UIColorFromRGB(0x9fbfd6);
+}
+
+
++(UIColor *)devicesListCellBottomViewBackgroundColor {
+    return UIColorFromRGB(0x3f5f78);
+}
+
 #pragma mark conversation
 +(UIColor *)conversationInputViewTextViewBackgroundColor {
     return UIColorFromRGB(0x9fbfd6);

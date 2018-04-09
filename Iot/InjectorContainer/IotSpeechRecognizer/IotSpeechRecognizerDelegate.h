@@ -8,6 +8,8 @@
 
 #import <UIKit/UIKit.h>
 
-@interface IotSpeechRecognizerDelegate : UIViewController
+@protocol IotSpeechRecognizerDelegate
+
+-(void)recognizedTextUpdated:(NSString *)recognizedText;
 
 @end

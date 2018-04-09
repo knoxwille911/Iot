@@ -23,6 +23,6 @@ typedef void (^IotServerProviderProtocolObjectsCompletionHandler) (NSArray<MTLMo
 
 -(void)getAllDevicesWithCompletionHandler:(IotServerProviderProtocolObjectsCompletionHandler)handler;
 -(void)getXDKdeviceWithID:(NSString *)deviceID;
--(void)getConversationAnswerForQuestion:(NSString *)question;
+-(void)getConversationAnswerForQuestion:(NSString *)question withCompletion:(IotServerProviderProtocolObjectsCompletionHandler)completion;
 
 @end

@@ -7,10 +7,13 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "IotSpeechRecognizerDelegate.h"
 
 @protocol IotSpeechRecognizerProtocol<NSObject>
 
 -(void)startListening;
 -(void)stopListening;
+
+@property (nonatomic, strong) id<IotSpeechRecognizerDelegate> delegate;
 
 @end

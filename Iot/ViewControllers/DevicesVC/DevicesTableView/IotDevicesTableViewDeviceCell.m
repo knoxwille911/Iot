@@ -26,7 +26,17 @@ static NSString *kIotDevicesTableViewDeviceCellUpdateButtonPressedIconName = @"c
 
 
 - (void)setupUI {
-    self.backgroundColor = [UIColor devicesListCellBackgroundColor];
+    self.backgroundColor = [UIColor clearColor];
+    
+    UIView *topView = [UIView new];
+    topView.translatesAutoresizingMaskIntoConstraints = NO;
+    topView.backgroundColor = [UIColor devicesListCellTopViewBackgroundColor];
+    [self.contentView addSubview:topView];
+    
+    [topView.leadingAnchor constraintEqualToAnchor:self.contentView.leadingAnchor constant:0].active = YES;
+    [topView.topAnchor constraintEqualToAnchor:self.contentView.topAnchor constant:0].active = YES;
+    [topView.trailingAnchor constraintEqualToAnchor:self.contentView.trailingAnchor constant:0].active = YES;
+    
     UIView *separatorView;
     //top view
     {
@@ -189,6 +199,18 @@ static NSString *kIotDevicesTableViewDeviceCellUpdateButtonPressedIconName = @"c
     [bottomSeparatorView.topAnchor constraintEqualToAnchor:self.deviceTimestampValueLabel.bottomAnchor constant:5].active = YES;
     [bottomSeparatorView.heightAnchor constraintEqualToConstant:1].active = YES;
 
+    [topView.bottomAnchor constraintEqualToAnchor:bottomSeparatorView.topAnchor constant:0].active = YES;
+    
+    UIView *bottomView = [UIView new];
+    bottomView.translatesAutoresizingMaskIntoConstraints = NO;
+    bottomView.backgroundColor = [UIColor devicesListCellBottomViewBackgroundColor];
+    [self.contentView addSubview:bottomView];
+    
+    [bottomView.leadingAnchor constraintEqualToAnchor:self.contentView.leadingAnchor constant:0].active = YES;
+    [bottomView.topAnchor constraintEqualToAnchor:bottomSeparatorView.bottomAnchor constant:0].active = YES;
+    [bottomView.trailingAnchor constraintEqualToAnchor:self.contentView.trailingAnchor constant:0].active = YES;
+    [bottomView.bottomAnchor constraintEqualToAnchor:self.contentView.bottomAnchor constant:0].active = YES;
+    
     self.deviceUpdateButton = [UIButton buttonWithType:UIButtonTypeCustom];
     UIImage *defaultImage = [UIImage imageNamed:kIotDevicesTableViewDeviceCellUpdateButtonIconName];
     UIImage *presedImage = [UIImage imageNamed:kIotDevicesTableViewDeviceCellUpdateButtonPressedIconName];
@@ -200,7 +222,7 @@ static NSString *kIotDevicesTableViewDeviceCellUpdateButtonPressedIconName = @"c
     
     [self.deviceUpdateButton.topAnchor constraintEqualToAnchor:bottomSeparatorView.bottomAnchor constant:5].active = YES;
     [self.deviceUpdateButton.trailingAnchor constraintEqualToAnchor:self.contentView.trailingAnchor constant:-20].active = YES;
-    [self.deviceUpdateButton.bottomAnchor constraintEqualToAnchor:self.contentView.bottomAnchor constant:0.f].active = YES;
+    [self.deviceUpdateButton.bottomAnchor constraintEqualToAnchor:self.contentView.bottomAnchor constant:-5.f].active = YES;
 }
 
 -(UIFont *)titleLabelFont {
