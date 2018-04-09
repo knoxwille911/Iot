@@ -161,7 +161,21 @@ static NSString *kIotDevicesTableViewBublCellUpdateButtonPressedIconName = @"con
     [bottomSeparatorView.topAnchor constraintEqualToAnchor:self.bublRGBValueLabel.bottomAnchor constant:5].active = YES;
     [bottomSeparatorView.heightAnchor constraintEqualToConstant:1].active = YES;
     
-    UIButton *previousButton = nil;
+    
+    UIStackView *stackView = [[UIStackView alloc] init];
+    stackView.translatesAutoresizingMaskIntoConstraints = NO;
+    stackView.axis = UILayoutConstraintAxisHorizontal;
+    stackView.distribution = UIStackViewDistributionEqualSpacing;
+    stackView.alignment = UIStackViewAlignmentCenter;
+
+    stackView.spacing = 30;
+    
+    UIView *leftView = [UIView new];
+    leftView.backgroundColor = [UIColor clearColor];
+    [leftView.widthAnchor constraintEqualToConstant:1].active = YES;
+    
+    [self.contentView addSubview:stackView];
+    [stackView addArrangedSubview:leftView];
     
     for (IotDevicesTableViewBublCellButtonType i = 0; i < IotDevicesTableViewBublCellButtonTypeCount; i++) {
         UIButton *button = [UIButton buttonWithType:UIButtonTypeCustom];
@@ -199,23 +213,18 @@ static NSString *kIotDevicesTableViewBublCellUpdateButtonPressedIconName = @"con
         button.tag = i;
         [button setBackgroundImage:defaultImage forState:UIControlStateNormal];
         [button setBackgroundImage:presedImage forState:UIControlStateSelected];
-        button.translatesAutoresizingMaskIntoConstraints = NO;
-        [self.contentView addSubview:button];
-        
-        [button.topAnchor constraintEqualToAnchor:bottomSeparatorView.bottomAnchor constant:5].active = YES;
-        [button.bottomAnchor constraintEqualToAnchor:self.contentView.bottomAnchor constant:0.f].active = YES;
-        
-        if (!previousButton) {
-            [button.leadingAnchor constraintGreaterThanOrEqualToAnchor:self.contentView.leadingAnchor constant:100].active = YES;
-        }
-        else {
-            [button.leadingAnchor constraintGreaterThanOrEqualToAnchor:previousButton.trailingAnchor constant:100].active = YES;
-        }
-        if (i == IotDevicesTableViewBublCellButtonTypeCount - 1) {
-            [button.trailingAnchor constraintLessThanOrEqualToAnchor:self.contentView.trailingAnchor constant:-20].active = YES;
-        }
-        previousButton = button;
+        [stackView addArrangedSubview:button];
     }
+    
+    UIView *rightView = [UIView new];
+    rightView.backgroundColor = [UIColor clearColor];
+    [rightView.widthAnchor constraintEqualToConstant:1].active = true;
+    [stackView addArrangedSubview:rightView];
+    
+    [stackView.topAnchor constraintEqualToAnchor:bottomSeparatorView.bottomAnchor constant:5].active = YES;
+    [stackView.leadingAnchor constraintEqualToAnchor:self.contentView.leadingAnchor constant:0].active = YES;
+    [stackView.trailingAnchor constraintEqualToAnchor:self.contentView.trailingAnchor constant:0].active = YES;
+    [stackView.bottomAnchor constraintEqualToAnchor:self.contentView.bottomAnchor constant:0.f].active = YES;
 }
 
 
@@ -230,7 +239,7 @@ static NSString *kIotDevicesTableViewBublCellUpdateButtonPressedIconName = @"con
 
 
 -(CGFloat)leftOffsetForValueLabel {
-    return 15.0f;
+    return 5.0f;
 }
 
 

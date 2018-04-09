@@ -64,7 +64,7 @@
     
     NSLog(@"%@", urlString);
     
-    NSString *fullUrl = [self fullURLForURL:urlString withAuthToken:authToken];
+    NSString *fullUrl = urlString;//self fullURLForURL:urlString withAuthToken:authToken];
     
     NSLog(@"FULL: %@", fullUrl);
     NSLog(@"\n\n");

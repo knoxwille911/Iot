@@ -142,7 +142,7 @@ static NSString *kIotDevicesTableViewDeviceCellUpdateButtonPressedIconName = @"c
         self.deviceHumidityTitleLabel.translatesAutoresizingMaskIntoConstraints = NO;
         self.deviceHumidityTitleLabel.textColor = [UIColor whiteColor];
         self.deviceHumidityTitleLabel.font = [self titleLabelFont];
-        [self.contentView addSubview:self.devicePresureTitleLabel];
+        [self.contentView addSubview:self.deviceHumidityTitleLabel];
         
         [self.deviceHumidityTitleLabel.leadingAnchor constraintEqualToAnchor:self.contentView.leadingAnchor constant:[self leftOffsetForTitleLabel]].active = YES;
         [self.deviceHumidityTitleLabel.topAnchor constraintEqualToAnchor:self.devicePresureValueLabel.bottomAnchor constant:[self titlelabelTopOffset]].active = YES;
@@ -185,7 +185,7 @@ static NSString *kIotDevicesTableViewDeviceCellUpdateButtonPressedIconName = @"c
     
     [bottomSeparatorView.leadingAnchor constraintEqualToAnchor:self.contentView.leadingAnchor constant:0].active = YES;
     [bottomSeparatorView.trailingAnchor constraintEqualToAnchor:self.contentView.trailingAnchor constant:0].active = YES;
-    [bottomSeparatorView.topAnchor constraintEqualToAnchor:self.devicePresureValueLabel.bottomAnchor constant:5].active = YES;
+    [bottomSeparatorView.topAnchor constraintEqualToAnchor:self.deviceTimestampValueLabel.bottomAnchor constant:5].active = YES;
     [bottomSeparatorView.heightAnchor constraintEqualToConstant:1].active = YES;
 
     self.deviceUpdateButton = [UIButton buttonWithType:UIButtonTypeCustom];
@@ -208,7 +208,7 @@ static NSString *kIotDevicesTableViewDeviceCellUpdateButtonPressedIconName = @"c
 
 
 -(CGFloat)leftOffsetForValueLabel {
-    return 15.0f;
+    return 5.0f;
 }
 
 

@@ -10,13 +10,172 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Iot/ViewControllers/DevicesVC/DevicesTableView/IotDevicesTableViewDataSource.m"
-            timestampString = "544954009.399834"
+            timestampString = "544962322.297441"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "128"
-            endingLineNumber = "128"
-            landmarkName = "-tableView:cellForRowAtIndexPath:"
+            startingLineNumber = "157"
+            endingLineNumber = "157"
+            landmarkName = "-nightOnButtonTapped:"
             landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Iot/Classes/IotServerProvider.m"
+            timestampString = "544962322.297511"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "98"
+            endingLineNumber = "98"
+            landmarkName = "-returnDefaultStateOfBulbWithId:withCompletion:"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "__67-[IotServerProvider returnDefaultStateOfBulbWithId:withCompletion:]_block_invoke"
+                  moduleName = "Iot"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/dmtech/Iot/Iot/Classes/IotServerProvider.m"
+                  timestampString = "544962322.381809"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "98"
+                  endingLineNumber = "98"
+                  offsetFromSymbolStart = "167">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "__copy_helper_block_.46"
+                  moduleName = "Iot"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/dmtech/Iot/Iot/Classes/IotServerProvider.m"
+                  timestampString = "544962322.385334"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "98"
+                  endingLineNumber = "98"
+                  offsetFromSymbolStart = "42">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "__destroy_helper_block_.47"
+                  moduleName = "Iot"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/dmtech/Iot/Iot/Classes/IotServerProvider.m"
+                  timestampString = "544962322.386964"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "98"
+                  endingLineNumber = "98"
+                  offsetFromSymbolStart = "29">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Iot/Classes/IotServerProvider.m"
+            timestampString = "544962322.297822"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "89"
+            endingLineNumber = "89"
+            landmarkName = "-returnDefaultStateOfBulbWithId:withCompletion:"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "-[IotServerProvider returnDefaultStateOfBulbWithId:withCompletion:]"
+                  moduleName = "Iot"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/dmtech/Iot/Iot/Classes/IotServerProvider.m"
+                  timestampString = "544962322.395511"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "89"
+                  endingLineNumber = "89"
+                  offsetFromSymbolStart = "138">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "__67-[IotServerProvider returnDefaultStateOfBulbWithId:withCompletion:]_block_invoke"
+                  moduleName = "Iot"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/dmtech/Iot/Iot/Classes/IotServerProvider.m"
+                  timestampString = "544962322.397717"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "89"
+                  endingLineNumber = "89"
+                  offsetFromSymbolStart = "16">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Iot/Classes/IotServerProvider.m"
+            timestampString = "544962322.2980469"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "46"
+            endingLineNumber = "46"
+            landmarkName = "-turnOnPowerBulbWithBulbId:withCompletion:"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "-[IotServerProvider turnOnPowerBulbWithBulbId:withCompletion:]"
+                  moduleName = "Iot"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/dmtech/Iot/Iot/Classes/IotServerProvider.m"
+                  timestampString = "544962322.4109139"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "46"
+                  endingLineNumber = "46"
+                  offsetFromSymbolStart = "138">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "__62-[IotServerProvider turnOnPowerBulbWithBulbId:withCompletion:]_block_invoke"
+                  moduleName = "Iot"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/dmtech/Iot/Iot/Classes/IotServerProvider.m"
+                  timestampString = "544962322.414305"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "46"
+                  endingLineNumber = "46"
+                  offsetFromSymbolStart = "16">
+               </Location>
+            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

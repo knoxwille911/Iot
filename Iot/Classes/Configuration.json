@@ -1,0 +1,30 @@
+{
+    bulbList =     (
+                    {
+                    brightness = 100;
+                    colorTemperature = 6500;
+                    name = "Smart bulb 1";
+                    power = on;
+                    rgbMap =             {
+                    Blue = 255;
+                    Green = 255;
+                    Red = 255;
+                    };
+                    }
+                    );
+    xdkList =     (
+                   {
+                   authToken = "<null>";
+                   clientId = "d:20sl3a:bosch_xdk:xdk_1";
+                   data =             {
+                   humidity = 22;
+                   light = 0;
+                   pressure = 99704;
+                   temperature = 34180;
+                   timestamp = 1523251156000;
+                   };
+                   deviceId = "xdk_1";
+                   typeId = "bosch_xdk";
+                   }
+                   );
+}

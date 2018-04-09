@@ -8,6 +8,9 @@
 
 #import "IotBulbDTO.h"
 
+static NSString *kIotBulbDTOOn = @"on";
+static NSString *kIotBulbDTOOff = @"off";
+
 @implementation IotBulbDTO
 
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
@@ -18,6 +21,16 @@
                @keypath(IotBulbDTO.new, bulbBrightness)       : @"brightness",
                @keypath(IotBulbDTO.new, rgbMapBulbName)       : @"rgbMap"
                };
+}
+
+
+-(BOOL)isOn {
+    return [self.bulbPower isEqualToString:kIotBulbDTOOn];
+}
+
+
+-(BOOL)isNightMode {
+    return NO;
 }
 
 @end

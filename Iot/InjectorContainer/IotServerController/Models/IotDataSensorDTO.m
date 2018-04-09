@@ -24,11 +24,21 @@
 + (NSValueTransformer *)dataSensorTimestampJSONTransformer {
     return [MTLValueTransformer transformerUsingForwardBlock:^id(NSNumber *date, BOOL *success, NSError *__autoreleasing *error) {
         NSDate *newDate;
-        newDate = [NSDate dateWithTimeIntervalSince1970:[date longLongValue]];
+        if ([self needDivideTo1000:date]) {
+            newDate = [NSDate dateWithTimeIntervalSince1970:[date longLongValue] / 1000];
+        }
+        else {
+            newDate = [NSDate dateWithTimeIntervalSince1970:[date longLongValue]];
+        }
         return newDate;
     } reverseBlock:^id(NSDate *date, BOOL *success, NSError *__autoreleasing *error) {
         return [NSNumber numberWithLong:[date timeIntervalSince1970]];
     }];
+}
+
+
++(BOOL)needDivideTo1000:(NSNumber *)number {
+    return ceil(log10 (number.doubleValue) > 12);
 }
 
 @end

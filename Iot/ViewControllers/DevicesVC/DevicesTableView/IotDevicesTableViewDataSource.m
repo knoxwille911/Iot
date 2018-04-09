@@ -59,9 +59,11 @@
         deviceCell.deviceHumidityValueLabel.text = [NSString stringWithFormat:@"%ld %@", deviceModel.XDKData.dataSensorHumidity.longValue, NSLocalizedString(@"%rH", @"%rH")];
         
         deviceCell.deviceTimestampLabel.text = NSLocalizedString(@"Timestamp: ", @"Timestamp: ");
-        deviceCell.deviceHumidityValueLabel.text = [NSString stringWithFormat:@"%@", [self deviceTimestampTextFromDate:deviceModel.XDKData.dataSensorTimestamp]];
+        deviceCell.deviceTimestampValueLabel.text = [NSString stringWithFormat:@"%@", [self deviceTimestampTextFromDate:deviceModel.XDKData.dataSensorTimestamp]];
         
         [deviceCell.deviceUpdateButton addTarget:self action:@selector(updateDeviceButtonTapped:) forControlEvents:UIControlEventTouchUpInside];
+        
+        cell = (UITableViewCell *)deviceCell;
     }
     else {
         IotBulbDTO *bulbModel = (IotBulbDTO *)mntModel;
@@ -78,7 +80,12 @@
         bubbleCell.bublBrigtnessValueLabel.text = [bulbModel.bulbBrightness stringValue];
         
         bubbleCell.bublRGBTitleLabel.text = NSLocalizedString(@"RGB: ", @"RGB: ");
-        bubbleCell.bublRGBValueLabel.text = [NSString stringWithFormat:@"Red: %ld Green: %ld Blue: %ld", (long)((NSNumber *)bulbModel.rgbMapBulbName[@"red"]).integerValue, (long)((NSNumber *)bulbModel.rgbMapBulbName[@"green"]).integerValue, (long)((NSNumber *)bulbModel.rgbMapBulbName[@"blue"]).integerValue];
+        
+        NSNumber *red = bulbModel.rgbMapBulbName[@"Red"];
+        NSNumber *green = bulbModel.rgbMapBulbName[@"Green"];
+        NSNumber *blue = bulbModel.rgbMapBulbName[@"Blue"];
+        
+        bubbleCell.bublRGBValueLabel.text = [NSString stringWithFormat:@"Red: %ld Green: %ld Blue: %ld", red.integerValue, green.integerValue, blue.integerValue];
         
         [bubbleCell.bublDefaultButton addTarget:self action:@selector(defaultButtonTapped:) forControlEvents:UIControlEventTouchUpInside];
         [bubbleCell.bublOnButton addTarget:self action:@selector(switchOnButtonTapped:) forControlEvents:UIControlEventTouchUpInside];
@@ -113,7 +120,8 @@
         NSIndexPath *indexPath = [self indexForButton:button];
         if (indexPath) {
             __weak IotDevicesTableViewDataSource *weakSelf = self;
-            [injectorContainer().serverProvider returnDefaultStateOfBulbWithId:@"0" withCompletion:^(BOOL result) {
+            IotBulbDTO *bulb = [self bulbForTapButton:button];
+            [injectorContainer().serverProvider returnDefaultStateOfBulbWithId:bulb.bulbName withCompletion:^(BOOL result) {
                 if (result) {
                     [weakSelf updateBublAtIndex:indexPath];
                 }
@@ -130,12 +138,12 @@
         if (indexPath) {
             __weak IotDevicesTableViewDataSource *weakSelf = self;
             if ([bulb isOn]) {
-                [injectorContainer().serverProvider turnOffPowerBulbWithBulbId:@"0" withCompletion:^(BOOL result) {
+                [injectorContainer().serverProvider turnOffPowerBulbWithBulbId:bulb.bulbName withCompletion:^(BOOL result) {
                     [weakSelf updateBublAtIndex:indexPath];
                 }];
             }
             else {
-                [injectorContainer().serverProvider turnOnPowerBulbWithBulbId:@"0" withCompletion:^(BOOL result) {
+                [injectorContainer().serverProvider turnOnPowerBulbWithBulbId:bulb.bulbName withCompletion:^(BOOL result) {
                     [weakSelf updateBublAtIndex:indexPath];
                 }];
             }
@@ -151,12 +159,12 @@
         if (indexPath) {
             __weak IotDevicesTableViewDataSource *weakSelf = self;
             if ([bulb isNightMode]) {
-                [injectorContainer().serverProvider turnOffNightStateOfBulbWithBulbId:@"0" withCompletion:^(BOOL result) {
+                [injectorContainer().serverProvider turnOffNightStateOfBulbWithBulbId:bulb.bulbName withCompletion:^(BOOL result) {
                     [weakSelf updateBublAtIndex:indexPath];
                 }];
             }
             else {
-                [injectorContainer().serverProvider turnOnNightStateOfBulbWithBulbId:@"0" withCompletion:^(BOOL result) {
+                [injectorContainer().serverProvider turnOnNightStateOfBulbWithBulbId:bulb.bulbName withCompletion:^(BOOL result) {
                     [weakSelf updateBublAtIndex:indexPath];
                 }];
             }
@@ -176,9 +184,23 @@
 
 
 -(NSIndexPath *)indexForButton:(UIButton *)button {
-    CGPoint point = [button convertPoint:CGPointZero toView:self.tableView];
-    NSIndexPath *indexPath = [self.tableView indexPathForCell:[self.tableView indexPathForRowAtPoint:point]];
+    UITableViewCell* cell = [self parentCellForView:button];
+    NSIndexPath* indexPath = [self.tableView indexPathForCell:cell];
     return indexPath;
+}
+
+
+-(UITableViewCell *)parentCellForView:(id)theView {
+    id viewSuperView = [theView superview];
+    while (viewSuperView != nil) {
+        if ([viewSuperView isKindOfClass:[UITableViewCell class]]) {
+            return (UITableViewCell *)viewSuperView;
+        }
+        else {
+            viewSuperView = [viewSuperView superview];
+        }
+    }
+    return nil;
 }
 
 
@@ -186,7 +208,7 @@
     NSIndexPath *indexPath = [self indexForButton:button];
     if (indexPath) {
         MTLModel *mntModel = self.objects[indexPath.row + indexPath.section];
-        if ([mntModel isKindOfClass:[IotXDKDTO class]]) {
+        if ([mntModel isKindOfClass:[IotBulbDTO class]]) {
             IotBulbDTO *bulbModel = (IotBulbDTO *)mntModel;
             return bulbModel;
         }
@@ -207,7 +229,9 @@
             bulbModel.bulbName = updatedBulbModel.bulbName;
             bulbModel.bulbPower = updatedBulbModel.bulbPower;
             bulbModel.bulbBrightness = updatedBulbModel.bulbBrightness;
-            [weakSelf.tableView reloadRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationNone];
+            dispatch_async(dispatch_get_main_queue(), ^{
+                [weakSelf.tableView reloadRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationNone];
+            });
         }
     }];
 }

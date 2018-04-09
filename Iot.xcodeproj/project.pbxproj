@@ -35,6 +35,7 @@
 		E22B0AB720779F8C00B3F331 /* IotDevicesTableViewDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = E22B0AB620779F8C00B3F331 /* IotDevicesTableViewDataSource.m */; };
 		E22B0ABA2077A8F100B3F331 /* IotTableViewDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = E22B0AB92077A8F100B3F331 /* IotTableViewDataSource.m */; };
 		E22B0ABD207B3C5400B3F331 /* IotDevicesTableViewDeviceCell.m in Sources */ = {isa = PBXBuildFile; fileRef = E22B0ABC207B3C5400B3F331 /* IotDevicesTableViewDeviceCell.m */; };
+		E22B0ABF207B62D800B3F331 /* Configuration.json in Resources */ = {isa = PBXBuildFile; fileRef = E22B0ABE207B62D700B3F331 /* Configuration.json */; };
 		E28A0E202075FC2A001B4F82 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = E28A0E1F2075FC2A001B4F82 /* AppDelegate.m */; };
 		E28A0E232075FC2A001B4F82 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E28A0E222075FC2A001B4F82 /* ViewController.m */; };
 		E28A0E262075FC2A001B4F82 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E28A0E242075FC2A001B4F82 /* Main.storyboard */; };
@@ -124,6 +125,7 @@
 		E22B0AB92077A8F100B3F331 /* IotTableViewDataSource.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = IotTableViewDataSource.m; sourceTree = "<group>"; };
 		E22B0ABB207B3C5400B3F331 /* IotDevicesTableViewDeviceCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = IotDevicesTableViewDeviceCell.h; sourceTree = "<group>"; };
 		E22B0ABC207B3C5400B3F331 /* IotDevicesTableViewDeviceCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = IotDevicesTableViewDeviceCell.m; sourceTree = "<group>"; };
+		E22B0ABE207B62D700B3F331 /* Configuration.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = Configuration.json; path = Iot/Classes/Configuration.json; sourceTree = SOURCE_ROOT; };
 		E28A0E1B2075FC2A001B4F82 /* Iot.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Iot.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E28A0E1E2075FC2A001B4F82 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		E28A0E1F2075FC2A001B4F82 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -252,6 +254,7 @@
 		E22B0A662076122100B3F331 /* Utils */ = {
 			isa = PBXGroup;
 			children = (
+				E22B0ABE207B62D700B3F331 /* Configuration.json */,
 				E22B0A8020764C2A00B3F331 /* UITextView+Placeholder.h */,
 				E22B0A8120764C2A00B3F331 /* UITextView+Placeholder.m */,
 				E22B0A672076124900B3F331 /* IotEndpoints.h */,
@@ -513,6 +516,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E22B0ABF207B62D800B3F331 /* Configuration.json in Resources */,
 				E28A0E2B2075FC2A001B4F82 /* LaunchScreen.storyboard in Resources */,
 				E28A0E282075FC2A001B4F82 /* Assets.xcassets in Resources */,
 				E22B0A522076057500B3F331 /* Podfile in Resources */,
