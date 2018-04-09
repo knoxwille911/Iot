@@ -1,0 +1,907 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 48;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		336ED95C690BB4D64A5D1E72 /* libPods-Iot.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 68DBECA4FA480932649B3878 /* libPods-Iot.a */; };
+		E22B0A522076057500B3F331 /* Podfile in Resources */ = {isa = PBXBuildFile; fileRef = E22B0A512076057400B3F331 /* Podfile */; };
+		E22B0A58207606E600B3F331 /* IotUIManager.m in Sources */ = {isa = PBXBuildFile; fileRef = E22B0A56207606E600B3F331 /* IotUIManager.m */; };
+		E22B0A5C20760A4700B3F331 /* IotConversationDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E22B0A5B20760A4700B3F331 /* IotConversationDetailViewController.m */; };
+		E22B0A6120760A8000B3F331 /* IotNotificationsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E22B0A6020760A8000B3F331 /* IotNotificationsViewController.m */; };
+		E22B0A6520760AA200B3F331 /* IotDevicesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E22B0A6420760AA200B3F331 /* IotDevicesViewController.m */; };
+		E22B0A6B2076124A00B3F331 /* IotEndpoints.m in Sources */ = {isa = PBXBuildFile; fileRef = E22B0A692076124A00B3F331 /* IotEndpoints.m */; };
+		E22B0A6C2076124A00B3F331 /* UIColor+SPColors.m in Sources */ = {isa = PBXBuildFile; fileRef = E22B0A6A2076124A00B3F331 /* UIColor+SPColors.m */; };
+		E22B0A6F207616EC00B3F331 /* IotInjectorContainer.m in Sources */ = {isa = PBXBuildFile; fileRef = E22B0A6E207616EC00B3F331 /* IotInjectorContainer.m */; };
+		E22B0A7B207648E500B3F331 /* DAKeyboardControl.m in Sources */ = {isa = PBXBuildFile; fileRef = E22B0A74207648E500B3F331 /* DAKeyboardControl.m */; };
+		E22B0A7C207648E500B3F331 /* IotConversationInputViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = E22B0A76207648E500B3F331 /* IotConversationInputViewModel.m */; };
+		E22B0A7D207648E500B3F331 /* IotConversationInputView.m in Sources */ = {isa = PBXBuildFile; fileRef = E22B0A77207648E500B3F331 /* IotConversationInputView.m */; };
+		E22B0A7E207648E500B3F331 /* HPTextViewInternal.m in Sources */ = {isa = PBXBuildFile; fileRef = E22B0A78207648E500B3F331 /* HPTextViewInternal.m */; };
+		E22B0A7F207648E500B3F331 /* HPGrowingTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = E22B0A79207648E500B3F331 /* HPGrowingTextView.m */; };
+		E22B0A8220764C2A00B3F331 /* UITextView+Placeholder.m in Sources */ = {isa = PBXBuildFile; fileRef = E22B0A8120764C2A00B3F331 /* UITextView+Placeholder.m */; };
+		E22B0A8820765B8500B3F331 /* IotNetworkController.m in Sources */ = {isa = PBXBuildFile; fileRef = E22B0A8520765B8500B3F331 /* IotNetworkController.m */; };
+		E22B0A8D20765E7500B3F331 /* IotServerProvider.m in Sources */ = {isa = PBXBuildFile; fileRef = E22B0A8A20765E7500B3F331 /* IotServerProvider.m */; };
+		E22B0A94207759ED00B3F331 /* IotSpeechRecognizer.m in Sources */ = {isa = PBXBuildFile; fileRef = E22B0A93207759ED00B3F331 /* IotSpeechRecognizer.m */; };
+		E22B0A9620775B2C00B3F331 /* Speech.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E22B0A9520775B2C00B3F331 /* Speech.framework */; };
+		E22B0A9D207769D800B3F331 /* IotBulbDTO.m in Sources */ = {isa = PBXBuildFile; fileRef = E22B0A9C207769D800B3F331 /* IotBulbDTO.m */; };
+		E22B0AA020776A0700B3F331 /* IotDataSensorDTO.m in Sources */ = {isa = PBXBuildFile; fileRef = E22B0A9F20776A0700B3F331 /* IotDataSensorDTO.m */; };
+		E22B0AA320776A1800B3F331 /* IotXDKDTO.m in Sources */ = {isa = PBXBuildFile; fileRef = E22B0AA220776A1800B3F331 /* IotXDKDTO.m */; };
+		E22B0AA620776A2B00B3F331 /* IotWrapperDTO.m in Sources */ = {isa = PBXBuildFile; fileRef = E22B0AA520776A2B00B3F331 /* IotWrapperDTO.m */; };
+		E22B0AA920776A3B00B3F331 /* IotConversationAnswerOutDTO.m in Sources */ = {isa = PBXBuildFile; fileRef = E22B0AA820776A3B00B3F331 /* IotConversationAnswerOutDTO.m */; };
+		E22B0AB2207773BD00B3F331 /* IotDevicesTableViewBublCell.m in Sources */ = {isa = PBXBuildFile; fileRef = E22B0AB0207773BD00B3F331 /* IotDevicesTableViewBublCell.m */; };
+		E22B0AB720779F8C00B3F331 /* IotDevicesTableViewDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = E22B0AB620779F8C00B3F331 /* IotDevicesTableViewDataSource.m */; };
+		E22B0ABA2077A8F100B3F331 /* IotTableViewDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = E22B0AB92077A8F100B3F331 /* IotTableViewDataSource.m */; };
+		E22B0ABD207B3C5400B3F331 /* IotDevicesTableViewDeviceCell.m in Sources */ = {isa = PBXBuildFile; fileRef = E22B0ABC207B3C5400B3F331 /* IotDevicesTableViewDeviceCell.m */; };
+		E28A0E202075FC2A001B4F82 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = E28A0E1F2075FC2A001B4F82 /* AppDelegate.m */; };
+		E28A0E232075FC2A001B4F82 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E28A0E222075FC2A001B4F82 /* ViewController.m */; };
+		E28A0E262075FC2A001B4F82 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E28A0E242075FC2A001B4F82 /* Main.storyboard */; };
+		E28A0E282075FC2A001B4F82 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E28A0E272075FC2A001B4F82 /* Assets.xcassets */; };
+		E28A0E2B2075FC2A001B4F82 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E28A0E292075FC2A001B4F82 /* LaunchScreen.storyboard */; };
+		E28A0E2E2075FC2A001B4F82 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = E28A0E2D2075FC2A001B4F82 /* main.m */; };
+		E28A0E382075FC2A001B4F82 /* IotTests.m in Sources */ = {isa = PBXBuildFile; fileRef = E28A0E372075FC2A001B4F82 /* IotTests.m */; };
+		E28A0E432075FC2A001B4F82 /* IotUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = E28A0E422075FC2A001B4F82 /* IotUITests.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		E28A0E342075FC2A001B4F82 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = E28A0E132075FC2A001B4F82 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = E28A0E1A2075FC2A001B4F82;
+			remoteInfo = Iot;
+		};
+		E28A0E3F2075FC2A001B4F82 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = E28A0E132075FC2A001B4F82 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = E28A0E1A2075FC2A001B4F82;
+			remoteInfo = Iot;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		19B3209F1DD9D9E10F044F8C /* Pods-Iot.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Iot.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Iot/Pods-Iot.debug.xcconfig"; sourceTree = "<group>"; };
+		68DBECA4FA480932649B3878 /* libPods-Iot.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Iot.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		6A2E0D9F786EE6B2E8B7C7D3 /* Pods-Iot.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Iot.release.xcconfig"; path = "Pods/Target Support Files/Pods-Iot/Pods-Iot.release.xcconfig"; sourceTree = "<group>"; };
+		E22B0A512076057400B3F331 /* Podfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		E22B0A55207606E600B3F331 /* IotUIManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = IotUIManager.h; path = Iot/Classes/IotUIManager.h; sourceTree = SOURCE_ROOT; };
+		E22B0A56207606E600B3F331 /* IotUIManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = IotUIManager.m; path = Iot/Classes/IotUIManager.m; sourceTree = SOURCE_ROOT; };
+		E22B0A57207606E600B3F331 /* IotUIManagerProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = IotUIManagerProtocol.h; path = Iot/Classes/IotUIManagerProtocol.h; sourceTree = SOURCE_ROOT; };
+		E22B0A5A20760A4700B3F331 /* IotConversationDetailViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = IotConversationDetailViewController.h; sourceTree = "<group>"; };
+		E22B0A5B20760A4700B3F331 /* IotConversationDetailViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = IotConversationDetailViewController.m; sourceTree = "<group>"; };
+		E22B0A5F20760A8000B3F331 /* IotNotificationsViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = IotNotificationsViewController.h; sourceTree = "<group>"; };
+		E22B0A6020760A8000B3F331 /* IotNotificationsViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = IotNotificationsViewController.m; sourceTree = "<group>"; };
+		E22B0A6320760AA200B3F331 /* IotDevicesViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = IotDevicesViewController.h; sourceTree = "<group>"; };
+		E22B0A6420760AA200B3F331 /* IotDevicesViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = IotDevicesViewController.m; sourceTree = "<group>"; };
+		E22B0A672076124900B3F331 /* IotEndpoints.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IotEndpoints.h; sourceTree = "<group>"; };
+		E22B0A682076124900B3F331 /* UIColor+SPColors.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+SPColors.h"; sourceTree = "<group>"; };
+		E22B0A692076124A00B3F331 /* IotEndpoints.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IotEndpoints.m; sourceTree = "<group>"; };
+		E22B0A6A2076124A00B3F331 /* UIColor+SPColors.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+SPColors.m"; sourceTree = "<group>"; };
+		E22B0A6D207616EC00B3F331 /* IotInjectorContainer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = IotInjectorContainer.h; path = Iot/Classes/IotInjectorContainer.h; sourceTree = SOURCE_ROOT; };
+		E22B0A6E207616EC00B3F331 /* IotInjectorContainer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = IotInjectorContainer.m; path = Iot/Classes/IotInjectorContainer.m; sourceTree = SOURCE_ROOT; };
+		E22B0A71207648E500B3F331 /* IotConversationInputViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = IotConversationInputViewModel.h; path = Iot/Classes/IotConversationInputViewModel.h; sourceTree = SOURCE_ROOT; };
+		E22B0A72207648E500B3F331 /* HPTextViewInternal.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HPTextViewInternal.h; path = Iot/Classes/HPTextViewInternal.h; sourceTree = SOURCE_ROOT; };
+		E22B0A73207648E500B3F331 /* DAKeyboardControl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DAKeyboardControl.h; path = Iot/Classes/DAKeyboardControl.h; sourceTree = SOURCE_ROOT; };
+		E22B0A74207648E500B3F331 /* DAKeyboardControl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DAKeyboardControl.m; path = Iot/Classes/DAKeyboardControl.m; sourceTree = SOURCE_ROOT; };
+		E22B0A75207648E500B3F331 /* IotConversationInputView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = IotConversationInputView.h; path = Iot/Classes/IotConversationInputView.h; sourceTree = SOURCE_ROOT; };
+		E22B0A76207648E500B3F331 /* IotConversationInputViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = IotConversationInputViewModel.m; path = Iot/Classes/IotConversationInputViewModel.m; sourceTree = SOURCE_ROOT; };
+		E22B0A77207648E500B3F331 /* IotConversationInputView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = IotConversationInputView.m; path = Iot/Classes/IotConversationInputView.m; sourceTree = SOURCE_ROOT; };
+		E22B0A78207648E500B3F331 /* HPTextViewInternal.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HPTextViewInternal.m; path = Iot/Classes/HPTextViewInternal.m; sourceTree = SOURCE_ROOT; };
+		E22B0A79207648E500B3F331 /* HPGrowingTextView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HPGrowingTextView.m; path = Iot/Classes/HPGrowingTextView.m; sourceTree = SOURCE_ROOT; };
+		E22B0A7A207648E500B3F331 /* HPGrowingTextView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HPGrowingTextView.h; path = Iot/Classes/HPGrowingTextView.h; sourceTree = SOURCE_ROOT; };
+		E22B0A8020764C2A00B3F331 /* UITextView+Placeholder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UITextView+Placeholder.h"; path = "Iot/Classes/UITextView+Placeholder.h"; sourceTree = SOURCE_ROOT; };
+		E22B0A8120764C2A00B3F331 /* UITextView+Placeholder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UITextView+Placeholder.m"; path = "Iot/Classes/UITextView+Placeholder.m"; sourceTree = SOURCE_ROOT; };
+		E22B0A832076532600B3F331 /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
+		E22B0A8520765B8500B3F331 /* IotNetworkController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = IotNetworkController.m; path = Iot/Classes/IotNetworkController.m; sourceTree = SOURCE_ROOT; };
+		E22B0A8620765B8500B3F331 /* IotNetworkController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = IotNetworkController.h; path = Iot/Classes/IotNetworkController.h; sourceTree = SOURCE_ROOT; };
+		E22B0A8720765B8500B3F331 /* IotNetworkControllerProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = IotNetworkControllerProtocol.h; path = Iot/Classes/IotNetworkControllerProtocol.h; sourceTree = SOURCE_ROOT; };
+		E22B0A8A20765E7500B3F331 /* IotServerProvider.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = IotServerProvider.m; path = Iot/Classes/IotServerProvider.m; sourceTree = SOURCE_ROOT; };
+		E22B0A8B20765E7500B3F331 /* IotServerProvider.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = IotServerProvider.h; path = Iot/Classes/IotServerProvider.h; sourceTree = SOURCE_ROOT; };
+		E22B0A8C20765E7500B3F331 /* IotServerProviderProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = IotServerProviderProtocol.h; path = Iot/Classes/IotServerProviderProtocol.h; sourceTree = SOURCE_ROOT; };
+		E22B0A8F2077563D00B3F331 /* IotSpeechRecognizerProtocol.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = IotSpeechRecognizerProtocol.h; sourceTree = "<group>"; };
+		E22B0A92207759ED00B3F331 /* IotSpeechRecognizer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = IotSpeechRecognizer.h; sourceTree = "<group>"; };
+		E22B0A93207759ED00B3F331 /* IotSpeechRecognizer.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = IotSpeechRecognizer.m; sourceTree = "<group>"; };
+		E22B0A9520775B2C00B3F331 /* Speech.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Speech.framework; path = System/Library/Frameworks/Speech.framework; sourceTree = SDKROOT; };
+		E22B0A97207762F000B3F331 /* IotSpeechRecognizerDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = IotSpeechRecognizerDelegate.h; sourceTree = "<group>"; };
+		E22B0A9B207769D800B3F331 /* IotBulbDTO.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = IotBulbDTO.h; sourceTree = "<group>"; };
+		E22B0A9C207769D800B3F331 /* IotBulbDTO.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = IotBulbDTO.m; sourceTree = "<group>"; };
+		E22B0A9E20776A0700B3F331 /* IotDataSensorDTO.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = IotDataSensorDTO.h; sourceTree = "<group>"; };
+		E22B0A9F20776A0700B3F331 /* IotDataSensorDTO.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = IotDataSensorDTO.m; sourceTree = "<group>"; };
+		E22B0AA120776A1800B3F331 /* IotXDKDTO.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = IotXDKDTO.h; sourceTree = "<group>"; };
+		E22B0AA220776A1800B3F331 /* IotXDKDTO.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = IotXDKDTO.m; sourceTree = "<group>"; };
+		E22B0AA420776A2B00B3F331 /* IotWrapperDTO.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = IotWrapperDTO.h; sourceTree = "<group>"; };
+		E22B0AA520776A2B00B3F331 /* IotWrapperDTO.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = IotWrapperDTO.m; sourceTree = "<group>"; };
+		E22B0AA720776A3B00B3F331 /* IotConversationAnswerOutDTO.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = IotConversationAnswerOutDTO.h; sourceTree = "<group>"; };
+		E22B0AA820776A3B00B3F331 /* IotConversationAnswerOutDTO.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = IotConversationAnswerOutDTO.m; sourceTree = "<group>"; };
+		E22B0AAF207773BD00B3F331 /* IotDevicesTableViewBublCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = IotDevicesTableViewBublCell.h; sourceTree = "<group>"; };
+		E22B0AB0207773BD00B3F331 /* IotDevicesTableViewBublCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = IotDevicesTableViewBublCell.m; sourceTree = "<group>"; };
+		E22B0AB520779F8C00B3F331 /* IotDevicesTableViewDataSource.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = IotDevicesTableViewDataSource.h; sourceTree = "<group>"; };
+		E22B0AB620779F8C00B3F331 /* IotDevicesTableViewDataSource.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = IotDevicesTableViewDataSource.m; sourceTree = "<group>"; };
+		E22B0AB82077A8F100B3F331 /* IotTableViewDataSource.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = IotTableViewDataSource.h; sourceTree = "<group>"; };
+		E22B0AB92077A8F100B3F331 /* IotTableViewDataSource.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = IotTableViewDataSource.m; sourceTree = "<group>"; };
+		E22B0ABB207B3C5400B3F331 /* IotDevicesTableViewDeviceCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = IotDevicesTableViewDeviceCell.h; sourceTree = "<group>"; };
+		E22B0ABC207B3C5400B3F331 /* IotDevicesTableViewDeviceCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = IotDevicesTableViewDeviceCell.m; sourceTree = "<group>"; };
+		E28A0E1B2075FC2A001B4F82 /* Iot.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Iot.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		E28A0E1E2075FC2A001B4F82 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		E28A0E1F2075FC2A001B4F82 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		E28A0E212075FC2A001B4F82 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		E28A0E222075FC2A001B4F82 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		E28A0E252075FC2A001B4F82 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		E28A0E272075FC2A001B4F82 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		E28A0E2A2075FC2A001B4F82 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		E28A0E2C2075FC2A001B4F82 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E28A0E2D2075FC2A001B4F82 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		E28A0E332075FC2A001B4F82 /* IotTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = IotTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		E28A0E372075FC2A001B4F82 /* IotTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = IotTests.m; sourceTree = "<group>"; };
+		E28A0E392075FC2A001B4F82 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E28A0E3E2075FC2A001B4F82 /* IotUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = IotUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		E28A0E422075FC2A001B4F82 /* IotUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = IotUITests.m; sourceTree = "<group>"; };
+		E28A0E442075FC2A001B4F82 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		E28A0E182075FC2A001B4F82 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E22B0A9620775B2C00B3F331 /* Speech.framework in Frameworks */,
+				336ED95C690BB4D64A5D1E72 /* libPods-Iot.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E28A0E302075FC2A001B4F82 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E28A0E3B2075FC2A001B4F82 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		6B1DE62C74CF91E24DDF8C91 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				19B3209F1DD9D9E10F044F8C /* Pods-Iot.debug.xcconfig */,
+				6A2E0D9F786EE6B2E8B7C7D3 /* Pods-Iot.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		E083ECE8B445E16978922E17 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				E22B0A9520775B2C00B3F331 /* Speech.framework */,
+				68DBECA4FA480932649B3878 /* libPods-Iot.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		E22B0A532076067200B3F331 /* InjectorContainer */ = {
+			isa = PBXGroup;
+			children = (
+				E22B0A8E2077561200B3F331 /* IotSpeechRecognizer */,
+				E22B0A8920765E6300B3F331 /* IotServerController */,
+				E22B0A8420765B5E00B3F331 /* IotNetworkController */,
+				E22B0A54207606D200B3F331 /* IotUIManager */,
+				E22B0A6D207616EC00B3F331 /* IotInjectorContainer.h */,
+				E22B0A6E207616EC00B3F331 /* IotInjectorContainer.m */,
+			);
+			path = InjectorContainer;
+			sourceTree = "<group>";
+		};
+		E22B0A54207606D200B3F331 /* IotUIManager */ = {
+			isa = PBXGroup;
+			children = (
+				E22B0A55207606E600B3F331 /* IotUIManager.h */,
+				E22B0A56207606E600B3F331 /* IotUIManager.m */,
+				E22B0A57207606E600B3F331 /* IotUIManagerProtocol.h */,
+			);
+			path = IotUIManager;
+			sourceTree = "<group>";
+		};
+		E22B0A592076073100B3F331 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				E22B0A6220760A8E00B3F331 /* DevicesVC */,
+				E22B0A5E20760A6900B3F331 /* NotificationsVC */,
+				E22B0A5D20760A4E00B3F331 /* ConversationDetail */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		E22B0A5D20760A4E00B3F331 /* ConversationDetail */ = {
+			isa = PBXGroup;
+			children = (
+				E22B0A70207648D200B3F331 /* InputView */,
+				E22B0A5A20760A4700B3F331 /* IotConversationDetailViewController.h */,
+				E22B0A5B20760A4700B3F331 /* IotConversationDetailViewController.m */,
+			);
+			path = ConversationDetail;
+			sourceTree = "<group>";
+		};
+		E22B0A5E20760A6900B3F331 /* NotificationsVC */ = {
+			isa = PBXGroup;
+			children = (
+				E22B0A5F20760A8000B3F331 /* IotNotificationsViewController.h */,
+				E22B0A6020760A8000B3F331 /* IotNotificationsViewController.m */,
+			);
+			path = NotificationsVC;
+			sourceTree = "<group>";
+		};
+		E22B0A6220760A8E00B3F331 /* DevicesVC */ = {
+			isa = PBXGroup;
+			children = (
+				E22B0AB4207773C100B3F331 /* DevicesTableView */,
+				E22B0A6320760AA200B3F331 /* IotDevicesViewController.h */,
+				E22B0A6420760AA200B3F331 /* IotDevicesViewController.m */,
+			);
+			path = DevicesVC;
+			sourceTree = "<group>";
+		};
+		E22B0A662076122100B3F331 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				E22B0A8020764C2A00B3F331 /* UITextView+Placeholder.h */,
+				E22B0A8120764C2A00B3F331 /* UITextView+Placeholder.m */,
+				E22B0A672076124900B3F331 /* IotEndpoints.h */,
+				E22B0A692076124A00B3F331 /* IotEndpoints.m */,
+				E22B0A682076124900B3F331 /* UIColor+SPColors.h */,
+				E22B0A6A2076124A00B3F331 /* UIColor+SPColors.m */,
+				E22B0AB82077A8F100B3F331 /* IotTableViewDataSource.h */,
+				E22B0AB92077A8F100B3F331 /* IotTableViewDataSource.m */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		E22B0A70207648D200B3F331 /* InputView */ = {
+			isa = PBXGroup;
+			children = (
+				E22B0A73207648E500B3F331 /* DAKeyboardControl.h */,
+				E22B0A74207648E500B3F331 /* DAKeyboardControl.m */,
+				E22B0A7A207648E500B3F331 /* HPGrowingTextView.h */,
+				E22B0A79207648E500B3F331 /* HPGrowingTextView.m */,
+				E22B0A72207648E500B3F331 /* HPTextViewInternal.h */,
+				E22B0A78207648E500B3F331 /* HPTextViewInternal.m */,
+				E22B0A75207648E500B3F331 /* IotConversationInputView.h */,
+				E22B0A77207648E500B3F331 /* IotConversationInputView.m */,
+				E22B0A71207648E500B3F331 /* IotConversationInputViewModel.h */,
+				E22B0A76207648E500B3F331 /* IotConversationInputViewModel.m */,
+			);
+			path = InputView;
+			sourceTree = "<group>";
+		};
+		E22B0A8420765B5E00B3F331 /* IotNetworkController */ = {
+			isa = PBXGroup;
+			children = (
+				E22B0A8620765B8500B3F331 /* IotNetworkController.h */,
+				E22B0A8520765B8500B3F331 /* IotNetworkController.m */,
+				E22B0A8720765B8500B3F331 /* IotNetworkControllerProtocol.h */,
+			);
+			path = IotNetworkController;
+			sourceTree = "<group>";
+		};
+		E22B0A8920765E6300B3F331 /* IotServerController */ = {
+			isa = PBXGroup;
+			children = (
+				E22B0A9A2077692000B3F331 /* Models */,
+				E22B0A8B20765E7500B3F331 /* IotServerProvider.h */,
+				E22B0A8A20765E7500B3F331 /* IotServerProvider.m */,
+				E22B0A8C20765E7500B3F331 /* IotServerProviderProtocol.h */,
+			);
+			path = IotServerController;
+			sourceTree = "<group>";
+		};
+		E22B0A8E2077561200B3F331 /* IotSpeechRecognizer */ = {
+			isa = PBXGroup;
+			children = (
+				E22B0A92207759ED00B3F331 /* IotSpeechRecognizer.h */,
+				E22B0A93207759ED00B3F331 /* IotSpeechRecognizer.m */,
+				E22B0A8F2077563D00B3F331 /* IotSpeechRecognizerProtocol.h */,
+				E22B0A97207762F000B3F331 /* IotSpeechRecognizerDelegate.h */,
+			);
+			path = IotSpeechRecognizer;
+			sourceTree = "<group>";
+		};
+		E22B0A9A2077692000B3F331 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				E22B0A9B207769D800B3F331 /* IotBulbDTO.h */,
+				E22B0A9C207769D800B3F331 /* IotBulbDTO.m */,
+				E22B0A9E20776A0700B3F331 /* IotDataSensorDTO.h */,
+				E22B0A9F20776A0700B3F331 /* IotDataSensorDTO.m */,
+				E22B0AA120776A1800B3F331 /* IotXDKDTO.h */,
+				E22B0AA220776A1800B3F331 /* IotXDKDTO.m */,
+				E22B0AA420776A2B00B3F331 /* IotWrapperDTO.h */,
+				E22B0AA520776A2B00B3F331 /* IotWrapperDTO.m */,
+				E22B0AA720776A3B00B3F331 /* IotConversationAnswerOutDTO.h */,
+				E22B0AA820776A3B00B3F331 /* IotConversationAnswerOutDTO.m */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		E22B0AB4207773C100B3F331 /* DevicesTableView */ = {
+			isa = PBXGroup;
+			children = (
+				E22B0AAF207773BD00B3F331 /* IotDevicesTableViewBublCell.h */,
+				E22B0AB0207773BD00B3F331 /* IotDevicesTableViewBublCell.m */,
+				E22B0ABB207B3C5400B3F331 /* IotDevicesTableViewDeviceCell.h */,
+				E22B0ABC207B3C5400B3F331 /* IotDevicesTableViewDeviceCell.m */,
+				E22B0AB520779F8C00B3F331 /* IotDevicesTableViewDataSource.h */,
+				E22B0AB620779F8C00B3F331 /* IotDevicesTableViewDataSource.m */,
+			);
+			path = DevicesTableView;
+			sourceTree = "<group>";
+		};
+		E28A0E122075FC2A001B4F82 = {
+			isa = PBXGroup;
+			children = (
+				E28A0E1D2075FC2A001B4F82 /* Iot */,
+				E28A0E362075FC2A001B4F82 /* IotTests */,
+				E28A0E412075FC2A001B4F82 /* IotUITests */,
+				E28A0E1C2075FC2A001B4F82 /* Products */,
+				6B1DE62C74CF91E24DDF8C91 /* Pods */,
+				E083ECE8B445E16978922E17 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		E28A0E1C2075FC2A001B4F82 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				E28A0E1B2075FC2A001B4F82 /* Iot.app */,
+				E28A0E332075FC2A001B4F82 /* IotTests.xctest */,
+				E28A0E3E2075FC2A001B4F82 /* IotUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		E28A0E1D2075FC2A001B4F82 /* Iot */ = {
+			isa = PBXGroup;
+			children = (
+				E22B0A662076122100B3F331 /* Utils */,
+				E22B0A592076073100B3F331 /* ViewControllers */,
+				E22B0A532076067200B3F331 /* InjectorContainer */,
+				E22B0A512076057400B3F331 /* Podfile */,
+				E28A0E1E2075FC2A001B4F82 /* AppDelegate.h */,
+				E28A0E1F2075FC2A001B4F82 /* AppDelegate.m */,
+				E28A0E212075FC2A001B4F82 /* ViewController.h */,
+				E28A0E222075FC2A001B4F82 /* ViewController.m */,
+				E28A0E242075FC2A001B4F82 /* Main.storyboard */,
+				E28A0E272075FC2A001B4F82 /* Assets.xcassets */,
+				E28A0E292075FC2A001B4F82 /* LaunchScreen.storyboard */,
+				E28A0E2C2075FC2A001B4F82 /* Info.plist */,
+				E28A0E2D2075FC2A001B4F82 /* main.m */,
+				E22B0A832076532600B3F331 /* PrefixHeader.pch */,
+			);
+			path = Iot;
+			sourceTree = "<group>";
+		};
+		E28A0E362075FC2A001B4F82 /* IotTests */ = {
+			isa = PBXGroup;
+			children = (
+				E28A0E372075FC2A001B4F82 /* IotTests.m */,
+				E28A0E392075FC2A001B4F82 /* Info.plist */,
+			);
+			path = IotTests;
+			sourceTree = "<group>";
+		};
+		E28A0E412075FC2A001B4F82 /* IotUITests */ = {
+			isa = PBXGroup;
+			children = (
+				E28A0E422075FC2A001B4F82 /* IotUITests.m */,
+				E28A0E442075FC2A001B4F82 /* Info.plist */,
+			);
+			path = IotUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		E28A0E1A2075FC2A001B4F82 /* Iot */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E28A0E472075FC2A001B4F82 /* Build configuration list for PBXNativeTarget "Iot" */;
+			buildPhases = (
+				BE3D0DC027E6E0DFB1A0347C /* [CP] Check Pods Manifest.lock */,
+				E28A0E172075FC2A001B4F82 /* Sources */,
+				E28A0E182075FC2A001B4F82 /* Frameworks */,
+				E28A0E192075FC2A001B4F82 /* Resources */,
+				937E7212DC605519418BCCBA /* [CP] Embed Pods Frameworks */,
+				32168E8C92518175383DFFAB /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Iot;
+			productName = Iot;
+			productReference = E28A0E1B2075FC2A001B4F82 /* Iot.app */;
+			productType = "com.apple.product-type.application";
+		};
+		E28A0E322075FC2A001B4F82 /* IotTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E28A0E4A2075FC2A001B4F82 /* Build configuration list for PBXNativeTarget "IotTests" */;
+			buildPhases = (
+				E28A0E2F2075FC2A001B4F82 /* Sources */,
+				E28A0E302075FC2A001B4F82 /* Frameworks */,
+				E28A0E312075FC2A001B4F82 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				E28A0E352075FC2A001B4F82 /* PBXTargetDependency */,
+			);
+			name = IotTests;
+			productName = IotTests;
+			productReference = E28A0E332075FC2A001B4F82 /* IotTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		E28A0E3D2075FC2A001B4F82 /* IotUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E28A0E4D2075FC2A001B4F82 /* Build configuration list for PBXNativeTarget "IotUITests" */;
+			buildPhases = (
+				E28A0E3A2075FC2A001B4F82 /* Sources */,
+				E28A0E3B2075FC2A001B4F82 /* Frameworks */,
+				E28A0E3C2075FC2A001B4F82 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				E28A0E402075FC2A001B4F82 /* PBXTargetDependency */,
+			);
+			name = IotUITests;
+			productName = IotUITests;
+			productReference = E28A0E3E2075FC2A001B4F82 /* IotUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		E28A0E132075FC2A001B4F82 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0920;
+				ORGANIZATIONNAME = DMTech;
+				TargetAttributes = {
+					E28A0E1A2075FC2A001B4F82 = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Automatic;
+					};
+					E28A0E322075FC2A001B4F82 = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Automatic;
+						TestTargetID = E28A0E1A2075FC2A001B4F82;
+					};
+					E28A0E3D2075FC2A001B4F82 = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Automatic;
+						TestTargetID = E28A0E1A2075FC2A001B4F82;
+					};
+				};
+			};
+			buildConfigurationList = E28A0E162075FC2A001B4F82 /* Build configuration list for PBXProject "Iot" */;
+			compatibilityVersion = "Xcode 8.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = E28A0E122075FC2A001B4F82;
+			productRefGroup = E28A0E1C2075FC2A001B4F82 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				E28A0E1A2075FC2A001B4F82 /* Iot */,
+				E28A0E322075FC2A001B4F82 /* IotTests */,
+				E28A0E3D2075FC2A001B4F82 /* IotUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		E28A0E192075FC2A001B4F82 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E28A0E2B2075FC2A001B4F82 /* LaunchScreen.storyboard in Resources */,
+				E28A0E282075FC2A001B4F82 /* Assets.xcassets in Resources */,
+				E22B0A522076057500B3F331 /* Podfile in Resources */,
+				E28A0E262075FC2A001B4F82 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E28A0E312075FC2A001B4F82 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E28A0E3C2075FC2A001B4F82 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		32168E8C92518175383DFFAB /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Iot/Pods-Iot-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		937E7212DC605519418BCCBA /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Iot/Pods-Iot-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		BE3D0DC027E6E0DFB1A0347C /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Iot-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		E28A0E172075FC2A001B4F82 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E22B0A6F207616EC00B3F331 /* IotInjectorContainer.m in Sources */,
+				E22B0A6120760A8000B3F331 /* IotNotificationsViewController.m in Sources */,
+				E28A0E232075FC2A001B4F82 /* ViewController.m in Sources */,
+				E22B0A8820765B8500B3F331 /* IotNetworkController.m in Sources */,
+				E22B0ABD207B3C5400B3F331 /* IotDevicesTableViewDeviceCell.m in Sources */,
+				E22B0A9D207769D800B3F331 /* IotBulbDTO.m in Sources */,
+				E22B0A7D207648E500B3F331 /* IotConversationInputView.m in Sources */,
+				E22B0AB2207773BD00B3F331 /* IotDevicesTableViewBublCell.m in Sources */,
+				E22B0ABA2077A8F100B3F331 /* IotTableViewDataSource.m in Sources */,
+				E22B0A94207759ED00B3F331 /* IotSpeechRecognizer.m in Sources */,
+				E22B0AA020776A0700B3F331 /* IotDataSensorDTO.m in Sources */,
+				E28A0E2E2075FC2A001B4F82 /* main.m in Sources */,
+				E22B0A58207606E600B3F331 /* IotUIManager.m in Sources */,
+				E22B0A7F207648E500B3F331 /* HPGrowingTextView.m in Sources */,
+				E22B0A7E207648E500B3F331 /* HPTextViewInternal.m in Sources */,
+				E22B0A6C2076124A00B3F331 /* UIColor+SPColors.m in Sources */,
+				E22B0A5C20760A4700B3F331 /* IotConversationDetailViewController.m in Sources */,
+				E22B0AA920776A3B00B3F331 /* IotConversationAnswerOutDTO.m in Sources */,
+				E22B0A7C207648E500B3F331 /* IotConversationInputViewModel.m in Sources */,
+				E22B0A7B207648E500B3F331 /* DAKeyboardControl.m in Sources */,
+				E22B0AA320776A1800B3F331 /* IotXDKDTO.m in Sources */,
+				E22B0A6520760AA200B3F331 /* IotDevicesViewController.m in Sources */,
+				E22B0A8D20765E7500B3F331 /* IotServerProvider.m in Sources */,
+				E22B0AB720779F8C00B3F331 /* IotDevicesTableViewDataSource.m in Sources */,
+				E28A0E202075FC2A001B4F82 /* AppDelegate.m in Sources */,
+				E22B0A6B2076124A00B3F331 /* IotEndpoints.m in Sources */,
+				E22B0AA620776A2B00B3F331 /* IotWrapperDTO.m in Sources */,
+				E22B0A8220764C2A00B3F331 /* UITextView+Placeholder.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E28A0E2F2075FC2A001B4F82 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E28A0E382075FC2A001B4F82 /* IotTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E28A0E3A2075FC2A001B4F82 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E28A0E432075FC2A001B4F82 /* IotUITests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		E28A0E352075FC2A001B4F82 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = E28A0E1A2075FC2A001B4F82 /* Iot */;
+			targetProxy = E28A0E342075FC2A001B4F82 /* PBXContainerItemProxy */;
+		};
+		E28A0E402075FC2A001B4F82 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = E28A0E1A2075FC2A001B4F82 /* Iot */;
+			targetProxy = E28A0E3F2075FC2A001B4F82 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		E28A0E242075FC2A001B4F82 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				E28A0E252075FC2A001B4F82 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		E28A0E292075FC2A001B4F82 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				E28A0E2A2075FC2A001B4F82 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		E28A0E452075FC2A001B4F82 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		E28A0E462075FC2A001B4F82 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		E28A0E482075FC2A001B4F82 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 19B3209F1DD9D9E10F044F8C /* Pods-Iot.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				GCC_PREFIX_HEADER = "$(SRCROOT)/Iot//PrefixHeader.pch";
+				INFOPLIST_FILE = Iot/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = DMTech.Iot;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		E28A0E492075FC2A001B4F82 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6A2E0D9F786EE6B2E8B7C7D3 /* Pods-Iot.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				GCC_PREFIX_HEADER = "$(SRCROOT)/Iot//PrefixHeader.pch";
+				INFOPLIST_FILE = Iot/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = DMTech.Iot;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		E28A0E4B2075FC2A001B4F82 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = IotTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = DMTech.IotTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Iot.app/Iot";
+			};
+			name = Debug;
+		};
+		E28A0E4C2075FC2A001B4F82 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = IotTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = DMTech.IotTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Iot.app/Iot";
+			};
+			name = Release;
+		};
+		E28A0E4E2075FC2A001B4F82 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = IotUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = DMTech.IotUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = Iot;
+			};
+			name = Debug;
+		};
+		E28A0E4F2075FC2A001B4F82 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = IotUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = DMTech.IotUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = Iot;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		E28A0E162075FC2A001B4F82 /* Build configuration list for PBXProject "Iot" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E28A0E452075FC2A001B4F82 /* Debug */,
+				E28A0E462075FC2A001B4F82 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E28A0E472075FC2A001B4F82 /* Build configuration list for PBXNativeTarget "Iot" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E28A0E482075FC2A001B4F82 /* Debug */,
+				E28A0E492075FC2A001B4F82 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E28A0E4A2075FC2A001B4F82 /* Build configuration list for PBXNativeTarget "IotTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E28A0E4B2075FC2A001B4F82 /* Debug */,
+				E28A0E4C2075FC2A001B4F82 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E28A0E4D2075FC2A001B4F82 /* Build configuration list for PBXNativeTarget "IotUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E28A0E4E2075FC2A001B4F82 /* Debug */,
+				E28A0E4F2075FC2A001B4F82 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = E28A0E132075FC2A001B4F82 /* Project object */;
+}
