@@ -15,7 +15,7 @@ typedef void (^IotServerProviderProtocolObjectsCompletionHandler) (NSArray<MTLMo
 
 -(void)turnOnPowerBulbWithBulbId:(NSString *)bulbID withCompletion:(IotServerProviderProtocolSimpleCompletionHandler)completion;
 -(void)turnOffPowerBulbWithBulbId:(NSString *)bulbID withCompletion:(IotServerProviderProtocolSimpleCompletionHandler)completion;
--(void)changeColorOfBulbWithBulbId:(NSString *)bulbID red:(NSNumber *)red green:(NSNumber *)green blue:(NSNumber *)blue;
+-(void)changeColorOfBulbWithBulbId:(NSString *)bulbID color:(UIColor *)color withCompletion:(IotServerProviderProtocolSimpleCompletionHandler)completion;
 -(void)returnDefaultStateOfBulbWithId:(NSString *)bulbID withCompletion:(IotServerProviderProtocolSimpleCompletionHandler)completion;
 -(void)turnOnNightStateOfBulbWithBulbId:(NSString *)bulbID withCompletion:(IotServerProviderProtocolSimpleCompletionHandler)completion;
 -(void)turnOffNightStateOfBulbWithBulbId:(NSString *)bulbID withCompletion:(IotServerProviderProtocolSimpleCompletionHandler)completion;

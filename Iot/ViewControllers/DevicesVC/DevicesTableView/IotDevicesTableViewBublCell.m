@@ -7,6 +7,7 @@
 //
 
 #import "IotDevicesTableViewBublCell.h"
+#import "UIColor+SPColors.h"
 
 static NSString *kIotDevicesTableViewBublCellBubIconName = @"conversation_Button-paper-plane";
 
@@ -38,7 +39,7 @@ static NSString *kIotDevicesTableViewBublCellUpdateButtonPressedIconName = @"con
 
 - (void)setupUI {
     
-    self.backgroundColor = UIColor.redColor;
+    self.backgroundColor = [UIColor devicesListCellBackgroundColor];
     UIView *separatorView;
     //top view
     {
@@ -51,7 +52,7 @@ static NSString *kIotDevicesTableViewBublCellUpdateButtonPressedIconName = @"con
         
         self.bublNameLabel = [UILabel new];
         self.bublNameLabel.translatesAutoresizingMaskIntoConstraints = NO;
-        self.bublNameLabel.textColor = [UIColor whiteColor];
+        self.bublNameLabel.textColor = [UIColor devicesListTitleTextColor];
         self.bublNameLabel.font = [self titleLabelFont];
         [self.contentView addSubview:self.bublNameLabel];
         
@@ -61,7 +62,7 @@ static NSString *kIotDevicesTableViewBublCellUpdateButtonPressedIconName = @"con
         
         separatorView = [UIView new];
         separatorView.translatesAutoresizingMaskIntoConstraints = NO;
-        separatorView.backgroundColor = [UIColor whiteColor];
+        separatorView.backgroundColor = [UIColor devicesListSeparatorColor];
         [self.contentView addSubview:separatorView];
         
         [separatorView.leadingAnchor constraintEqualToAnchor:self.contentView.leadingAnchor constant:0].active = YES;
@@ -73,7 +74,7 @@ static NSString *kIotDevicesTableViewBublCellUpdateButtonPressedIconName = @"con
     {
         self.bublPowerTitleLabel = [UILabel new];
         self.bublPowerTitleLabel.translatesAutoresizingMaskIntoConstraints = NO;
-        self.bublPowerTitleLabel.textColor = [UIColor whiteColor];
+        self.bublPowerTitleLabel.textColor = [UIColor devicesListTitleTextColor];
         self.bublPowerTitleLabel.font = [self titleLabelFont];
         [self.contentView addSubview:self.bublPowerTitleLabel];
         
@@ -83,7 +84,7 @@ static NSString *kIotDevicesTableViewBublCellUpdateButtonPressedIconName = @"con
         
         self.bublPowerValueLabel = [UILabel new];
         self.bublPowerValueLabel.translatesAutoresizingMaskIntoConstraints = NO;
-        self.bublPowerValueLabel.textColor = [UIColor whiteColor];
+        self.bublPowerValueLabel.textColor = [UIColor devicesListValueTextColor];
         self.bublPowerValueLabel.font = [self titleLabelFont];
         [self.contentView addSubview:self.bublPowerValueLabel];
         
@@ -93,7 +94,7 @@ static NSString *kIotDevicesTableViewBublCellUpdateButtonPressedIconName = @"con
     {
         self.bublTempetureTitleLabel = [UILabel new];
         self.bublTempetureTitleLabel.translatesAutoresizingMaskIntoConstraints = NO;
-        self.bublTempetureTitleLabel.textColor = [UIColor whiteColor];
+        self.bublTempetureTitleLabel.textColor = [UIColor devicesListTitleTextColor];
         self.bublTempetureTitleLabel.font = [self titleLabelFont];
         [self.contentView addSubview:self.bublTempetureTitleLabel];
         
@@ -103,7 +104,7 @@ static NSString *kIotDevicesTableViewBublCellUpdateButtonPressedIconName = @"con
         
         self.bublTempetureValueLabel = [UILabel new];
         self.bublTempetureValueLabel.translatesAutoresizingMaskIntoConstraints = NO;
-        self.bublTempetureValueLabel.textColor = [UIColor whiteColor];
+        self.bublTempetureValueLabel.textColor = [UIColor devicesListValueTextColor];
         self.bublTempetureValueLabel.font = [self titleLabelFont];
         [self.contentView addSubview:self.bublTempetureValueLabel];
         
@@ -113,7 +114,7 @@ static NSString *kIotDevicesTableViewBublCellUpdateButtonPressedIconName = @"con
     {
         self.bublBrigtnessTitleLabel = [UILabel new];
         self.bublBrigtnessTitleLabel.translatesAutoresizingMaskIntoConstraints = NO;
-        self.bublBrigtnessTitleLabel.textColor = [UIColor whiteColor];
+        self.bublBrigtnessTitleLabel.textColor = [UIColor devicesListTitleTextColor];
         self.bublBrigtnessTitleLabel.font = [self titleLabelFont];
         [self.contentView addSubview:self.bublBrigtnessTitleLabel];
         
@@ -123,7 +124,7 @@ static NSString *kIotDevicesTableViewBublCellUpdateButtonPressedIconName = @"con
         
         self.bublBrigtnessValueLabel = [UILabel new];
         self.bublBrigtnessValueLabel.translatesAutoresizingMaskIntoConstraints = NO;
-        self.bublBrigtnessValueLabel.textColor = [UIColor whiteColor];
+        self.bublBrigtnessValueLabel.textColor = [UIColor devicesListValueTextColor];
         self.bublBrigtnessValueLabel.font = [self titleLabelFont];
         [self.contentView addSubview:self.bublBrigtnessValueLabel];
         
@@ -133,7 +134,7 @@ static NSString *kIotDevicesTableViewBublCellUpdateButtonPressedIconName = @"con
     {
         self.bublRGBTitleLabel = [UILabel new];
         self.bublRGBTitleLabel.translatesAutoresizingMaskIntoConstraints = NO;
-        self.bublRGBTitleLabel.textColor = [UIColor whiteColor];
+        self.bublRGBTitleLabel.textColor = [UIColor devicesListTitleTextColor];
         self.bublRGBTitleLabel.font = [self titleLabelFont];
         [self.contentView addSubview:self.bublRGBTitleLabel];
         
@@ -143,7 +144,7 @@ static NSString *kIotDevicesTableViewBublCellUpdateButtonPressedIconName = @"con
         
         self.bublRGBValueLabel = [UILabel new];
         self.bublRGBValueLabel.translatesAutoresizingMaskIntoConstraints = NO;
-        self.bublRGBValueLabel.textColor = [UIColor whiteColor];
+        self.bublRGBValueLabel.textColor = [UIColor devicesListValueTextColor];
         self.bublRGBValueLabel.font = [self titleLabelFont];
         [self.contentView addSubview:self.bublRGBValueLabel];
         
@@ -153,7 +154,7 @@ static NSString *kIotDevicesTableViewBublCellUpdateButtonPressedIconName = @"con
     //bottom view
     UIView *bottomSeparatorView = [UIView new];
     bottomSeparatorView.translatesAutoresizingMaskIntoConstraints = NO;
-    bottomSeparatorView.backgroundColor = [UIColor whiteColor];
+    bottomSeparatorView.backgroundColor = [UIColor devicesListSeparatorColor];
     [self.contentView addSubview:bottomSeparatorView];
     
     [bottomSeparatorView.leadingAnchor constraintEqualToAnchor:self.contentView.leadingAnchor constant:0].active = YES;
@@ -250,6 +251,20 @@ static NSString *kIotDevicesTableViewBublCellUpdateButtonPressedIconName = @"con
 
 -(CGFloat)titlelabelTopOffset {
     return 7.0f;
+}
+
+
+-(void)prepareForReuse {
+    [super prepareForReuse];
+    self.bublNameLabel.text = nil;
+    self.bublPowerTitleLabel.text = nil;
+    self.bublPowerValueLabel.text = nil;
+    self.bublTempetureTitleLabel.text = nil;
+    self.bublTempetureValueLabel.text = nil;
+    self.bublBrigtnessTitleLabel.text = nil;
+    self.bublBrigtnessValueLabel.text = nil;
+    self.bublRGBTitleLabel.text = nil;
+    self.bublRGBValueLabel.text = nil;
 }
 
 @end

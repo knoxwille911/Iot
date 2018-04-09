@@ -14,6 +14,15 @@
 #import "IotBulbDTO.h"
 #import "IotDevicesTableViewDeviceCell.h"
 #import "IotDataSensorDTO.h"
+#import "MSColorSelectionViewController.h"
+
+@interface IotDevicesTableViewDataSource()<UIPopoverPresentationControllerDelegate, MSColorSelectionViewControllerDelegate> {
+    UINavigationController *_colorNavVc;
+    MSColorSelectionViewController *_colorVC;
+}
+
+@end
+
 
 @implementation IotDevicesTableViewDataSource
 
@@ -111,7 +120,10 @@
 
 
 -(void)updateDeviceButtonTapped:(UIButton *)button {
-    
+    NSIndexPath *indexPath = [self indexForButton:button];
+    if (indexPath) {
+        [self updateBublAtIndex:indexPath];
+    }
 }
 
 
@@ -174,7 +186,27 @@
 
 
 -(void)rgbButtonTapped:(UIButton *)button {
+    NSIndexPath *indexPath = [self indexForButton:button];
     
+    _colorVC = [[MSColorSelectionViewController alloc] init];
+    _colorVC.indexPath = indexPath;
+    _colorNavVc = [[UINavigationController alloc] initWithRootViewController:_colorVC];
+
+    _colorNavVc.modalPresentationStyle = UIModalPresentationPopover;
+    _colorNavVc.popoverPresentationController.delegate = self;
+    _colorNavVc.popoverPresentationController.sourceView = button;
+    _colorNavVc.popoverPresentationController.sourceRect = button.bounds;
+    _colorNavVc.preferredContentSize = [_colorVC.view systemLayoutSizeFittingSize:UILayoutFittingCompressedSize];
+    
+    _colorVC.delegate = self;
+    _colorVC.color = self.targetViewController.view.backgroundColor;
+    
+    if (self.targetViewController.traitCollection.horizontalSizeClass == UIUserInterfaceSizeClassCompact) {
+        UIBarButtonItem *doneBtn = [[UIBarButtonItem alloc] initWithTitle:NSLocalizedString(@"Done", ) style:UIBarButtonItemStyleDone target:self action:@selector(ms_dismissViewController:)];
+        _colorVC.navigationItem.rightBarButtonItem = doneBtn;
+    }
+    
+    [self.targetViewController presentViewController:_colorNavVc animated:YES completion:nil];
 }
 
 
@@ -222,7 +254,7 @@
     MTLModel *mntModel = self.objects[indexPath.row + indexPath.section];
     IotBulbDTO *bulbModel = (IotBulbDTO *)mntModel;
     __weak IotDevicesTableViewDataSource *weakSelf = self;
-    [injectorContainer().serverProvider getInfoOfBulbWithBulbId:@"0" withCompletionHandler:^(NSArray<MTLModel *> *objects) {
+    [injectorContainer().serverProvider getInfoOfBulbWithBulbId:bulbModel.bulbName withCompletionHandler:^(NSArray<MTLModel *> *objects) {
         if (objects.count) {
             IotBulbDTO *updatedBulbModel = (IotBulbDTO *)[objects firstObject];
             bulbModel.bulbColorTemperature = updatedBulbModel.bulbColorTemperature;
@@ -236,4 +268,25 @@
     }];
 }
 
+
+#pragma mark - MSColorViewDelegate
+
+- (void)colorViewController:(MSColorSelectionViewController *)colorViewCntroller didChangeColor:(UIColor *)color {
+
+}
+
+#pragma mark - Private
+
+- (void)ms_dismissViewController:(id)sender {
+    MTLModel *mntModel = self.objects[_colorVC.indexPath.row + _colorVC.indexPath.section];
+    IotBulbDTO *bulbModel = (IotBulbDTO *)mntModel;
+    
+    __weak IotDevicesTableViewDataSource *weakSelf = self;
+    
+    NSIndexPath *path = _colorVC.indexPath;
+    [injectorContainer().serverProvider changeColorOfBulbWithBulbId:bulbModel.bulbName color:_colorVC.color withCompletion:^(BOOL result) {
+        [weakSelf updateBublAtIndex:path];
+    }];
+    [_colorNavVc dismissViewControllerAnimated:YES completion:nil];
+}
 @end

@@ -71,15 +71,29 @@ static const NSString *kIotServerProviderConversationQuestionKey  = @"q";
 }
 
 
--(void)changeColorOfBulbWithBulbId:(NSString *)bulbID red:(NSNumber *)red green:(NSNumber *)green blue:(NSNumber *)blue {
-
-    NSDictionary *params = [NSDictionary dictionaryWithObjectsAndKeys:kIotServerProviderBulbIDKey, bulbID,
-                            kIotServerProviderBulbRedColor, red,
-                            kIotServerProviderBulbGreenColor, green,
-                            kIotServerProviderBulbBlurColor, blue,
+-(void)changeColorOfBulbWithBulbId:(NSString *)bulbID color:(UIColor *)color withCompletion:(IotServerProviderProtocolSimpleCompletionHandler)completion {
+    
+    CGFloat red = 0.0, green = 0.0, blue = 0.0, alpha =0.0;
+    [color getRed:&red green:&green blue:&blue alpha:&alpha];
+    
+    NSInteger redInt = (NSInteger)(red * 255.0f);
+    NSInteger greenInt = (NSInteger)(green * 255.0f);
+    NSInteger blueInt = (NSInteger)(blue * 255.0f);
+    
+    NSDictionary *params = [NSDictionary dictionaryWithObjectsAndKeys:bulbID, kIotServerProviderBulbIDKey,
+                            @(redInt), kIotServerProviderBulbRedColor,
+                            @(greenInt), kIotServerProviderBulbGreenColor,
+                            @(blueInt), kIotServerProviderBulbBlurColor,
                             nil];
-    [self.injection.networkController post:[IotEndpoints changeColorOfBulbEndpoint] withParams:params shouldIncludeAuthToken:YES withCompletionHandler:^(NSObject *response, NSError *error) {
-        
+    [self.injection.networkController postAsFormData:[IotEndpoints changeColorOfBulbEndpoint] withParams:params shouldIncludeAuthToken:YES withCompletionHandler:^(NSObject *response, NSError *error) {
+        if (completion) {
+            if (error) {
+                completion(NO);
+            }
+            else {
+                completion(YES);
+            }
+        }
     }];
 }
 

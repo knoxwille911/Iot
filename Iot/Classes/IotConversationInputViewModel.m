@@ -130,6 +130,16 @@ static CGFloat kConversationInputViewHeight = 44;
 }
 
 
+-(void)sendButtonLongTapBegan {
+    [self.delegate sendButtonLongTapBegan];
+}
+
+
+-(void)sendButtonLongTapEnded {
+    [self.delegate sendButtonLongTapEnded];
+}
+
+
 #pragma mark keyboad notifications
 
 -(void) keyboardWillShow:(NSNotification *)note{

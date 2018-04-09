@@ -77,10 +77,39 @@
     [[UINavigationBar appearance] setTintColor:UIColor.navigationBarTintColor];
     [[UINavigationBar appearance] setTitleTextAttributes:@{NSForegroundColorAttributeName : UIColor.navigationBarTextColor,
                                                            NSFontAttributeName : [UIFont systemFontOfSize:20.f weight:UIFontWeightRegular]}];
+//    [[UINavigationBar appearance] setBackgroundImage:[[UIImage alloc] init] forBarMetrics:UIBarMetricsDefault];
+//    [[UINavigationBar appearance] setShadowImage:[[UIImage alloc] init]];
     
     UIWindow *window = [[UIApplication sharedApplication].windows firstObject];
     
     window.rootViewController = _tabBarController;
+    
+    
+    
+    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.3 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+        [self showHelloAlertForViewController:rootNavConversationVC];
+    });
+}
+
+
+-(void)showHelloAlertForViewController:(UIViewController *)viewController {
+    UIAlertController * alert = [UIAlertController
+                                 alertControllerWithTitle:NSLocalizedString(@"Hi, its Ella. How can I help?", @"Hi, its Ella. How can I help?")
+                                 message:NSLocalizedString(@"Press mic button to speak to me, type a message to chat or press any of the navigation tabs above to explore my UI", @"Press mic button to speak to me, type a message to chat or press any of the navigation tabs above to explore my UI")
+                                 preferredStyle:UIAlertControllerStyleAlert];
+    
+    //Add Buttons
+    
+    UIAlertAction* yesButton = [UIAlertAction
+                                actionWithTitle:NSLocalizedString(@"OK", @"OK")
+                                style:UIAlertActionStyleCancel
+                                handler:^(UIAlertAction * action) {
+                                    //Handle your yes please button action here
+                                }];
+
+    [alert addAction:yesButton];
+    
+    [viewController presentViewController:alert animated:YES completion:nil];
 }
 
 @end

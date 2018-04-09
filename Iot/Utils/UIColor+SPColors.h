@@ -22,6 +22,13 @@
 +(UIColor *)navigationBarTextColor;
 +(UIColor *)navigationBarShadowColor;
 
+#pragma devices list
+
++(UIColor *)devicesListCellBackgroundColor;
++(UIColor *)devicesListTitleTextColor;
++(UIColor *)devicesListValueTextColor;
++(UIColor *)devicesListSeparatorColor;
++(UIColor *)deviceListControllerBackgroundColor;
 
 #pragma conversation
 +(UIColor *)conversationInputViewTextViewBackgroundColor;
@@ -31,5 +38,6 @@
 +(UIColor *)conversationInputViewBackgroundColor;
 +(UIColor *)conversationInputViewPlaceholderColor;
 +(UIColor *)conversationInputViewGalleryCellOverlayColor;
++(UIColor *)conversationControllerBackgroundColor;
 
 @end

@@ -12,6 +12,7 @@
 #import "IotDevicesTableViewDataSource.h"
 #import "IotDevicesTableViewBublCell.h"
 #import "IotDevicesTableViewDeviceCell.h"
+#import "UIColor+SPColors.h"
 
 @interface IotDevicesViewController ()<UITableViewDelegate> {
     UITableView *_tableView;
@@ -24,12 +25,17 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+    self.view.backgroundColor = [UIColor deviceListControllerBackgroundColor];
+    self.title = NSLocalizedString(@"Devices", @"Devices");
+    
     _tableView = [[UITableView alloc] initWithFrame:CGRectZero style:UITableViewStyleGrouped];
     [_tableView registerClass:[IotDevicesTableViewBublCell class] forCellReuseIdentifier:NSStringFromClass([IotDevicesTableViewBublCell class])];
     [_tableView registerClass:[IotDevicesTableViewDeviceCell class] forCellReuseIdentifier:NSStringFromClass([IotDevicesTableViewDeviceCell class])];
     _tableView.translatesAutoresizingMaskIntoConstraints = NO;
+    _tableView.backgroundColor = [UIColor clearColor];
+    
     _tableView.delegate = self;
-    _dataSource = [[IotDevicesTableViewDataSource alloc] initWithTableView:_tableView];
+    _dataSource = [[IotDevicesTableViewDataSource alloc] initWithTableView:_tableView targetViewControler:self];
     _tableView.dataSource = _dataSource;
     _tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
     _tableView.indicatorStyle = UIScrollViewIndicatorStyleWhite;

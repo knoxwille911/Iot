@@ -36,6 +36,14 @@
 		E22B0ABA2077A8F100B3F331 /* IotTableViewDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = E22B0AB92077A8F100B3F331 /* IotTableViewDataSource.m */; };
 		E22B0ABD207B3C5400B3F331 /* IotDevicesTableViewDeviceCell.m in Sources */ = {isa = PBXBuildFile; fileRef = E22B0ABC207B3C5400B3F331 /* IotDevicesTableViewDeviceCell.m */; };
 		E22B0ABF207B62D800B3F331 /* Configuration.json in Resources */ = {isa = PBXBuildFile; fileRef = E22B0ABE207B62D700B3F331 /* Configuration.json */; };
+		E22B0AD3207B7DFC00B3F331 /* MSColorComponentView.m in Sources */ = {isa = PBXBuildFile; fileRef = E22B0AC2207B7DFC00B3F331 /* MSColorComponentView.m */; };
+		E22B0AD4207B7DFC00B3F331 /* MSColorSelectionView.m in Sources */ = {isa = PBXBuildFile; fileRef = E22B0AC5207B7DFC00B3F331 /* MSColorSelectionView.m */; };
+		E22B0AD5207B7DFC00B3F331 /* MSColorSelectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E22B0AC7207B7DFC00B3F331 /* MSColorSelectionViewController.m */; };
+		E22B0AD6207B7DFC00B3F331 /* MSColorUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = E22B0AC9207B7DFC00B3F331 /* MSColorUtils.m */; };
+		E22B0AD7207B7DFC00B3F331 /* MSColorWheelView.m in Sources */ = {isa = PBXBuildFile; fileRef = E22B0ACC207B7DFC00B3F331 /* MSColorWheelView.m */; };
+		E22B0AD8207B7DFC00B3F331 /* MSHSBView.m in Sources */ = {isa = PBXBuildFile; fileRef = E22B0ACE207B7DFC00B3F331 /* MSHSBView.m */; };
+		E22B0AD9207B7DFC00B3F331 /* MSRGBView.m in Sources */ = {isa = PBXBuildFile; fileRef = E22B0AD0207B7DFC00B3F331 /* MSRGBView.m */; };
+		E22B0ADA207B7DFC00B3F331 /* MSSliderView.m in Sources */ = {isa = PBXBuildFile; fileRef = E22B0AD2207B7DFC00B3F331 /* MSSliderView.m */; };
 		E28A0E202075FC2A001B4F82 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = E28A0E1F2075FC2A001B4F82 /* AppDelegate.m */; };
 		E28A0E232075FC2A001B4F82 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E28A0E222075FC2A001B4F82 /* ViewController.m */; };
 		E28A0E262075FC2A001B4F82 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E28A0E242075FC2A001B4F82 /* Main.storyboard */; };
@@ -126,6 +134,24 @@
 		E22B0ABB207B3C5400B3F331 /* IotDevicesTableViewDeviceCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = IotDevicesTableViewDeviceCell.h; sourceTree = "<group>"; };
 		E22B0ABC207B3C5400B3F331 /* IotDevicesTableViewDeviceCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = IotDevicesTableViewDeviceCell.m; sourceTree = "<group>"; };
 		E22B0ABE207B62D700B3F331 /* Configuration.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = Configuration.json; path = Iot/Classes/Configuration.json; sourceTree = SOURCE_ROOT; };
+		E22B0AC1207B7DFC00B3F331 /* MSColorComponentView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MSColorComponentView.h; sourceTree = "<group>"; };
+		E22B0AC2207B7DFC00B3F331 /* MSColorComponentView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MSColorComponentView.m; sourceTree = "<group>"; };
+		E22B0AC3207B7DFC00B3F331 /* MSColorPicker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MSColorPicker.h; sourceTree = "<group>"; };
+		E22B0AC4207B7DFC00B3F331 /* MSColorSelectionView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MSColorSelectionView.h; sourceTree = "<group>"; };
+		E22B0AC5207B7DFC00B3F331 /* MSColorSelectionView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MSColorSelectionView.m; sourceTree = "<group>"; };
+		E22B0AC6207B7DFC00B3F331 /* MSColorSelectionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MSColorSelectionViewController.h; sourceTree = "<group>"; };
+		E22B0AC7207B7DFC00B3F331 /* MSColorSelectionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MSColorSelectionViewController.m; sourceTree = "<group>"; };
+		E22B0AC8207B7DFC00B3F331 /* MSColorUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MSColorUtils.h; sourceTree = "<group>"; };
+		E22B0AC9207B7DFC00B3F331 /* MSColorUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MSColorUtils.m; sourceTree = "<group>"; };
+		E22B0ACA207B7DFC00B3F331 /* MSColorView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MSColorView.h; sourceTree = "<group>"; };
+		E22B0ACB207B7DFC00B3F331 /* MSColorWheelView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MSColorWheelView.h; sourceTree = "<group>"; };
+		E22B0ACC207B7DFC00B3F331 /* MSColorWheelView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MSColorWheelView.m; sourceTree = "<group>"; };
+		E22B0ACD207B7DFC00B3F331 /* MSHSBView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MSHSBView.h; sourceTree = "<group>"; };
+		E22B0ACE207B7DFC00B3F331 /* MSHSBView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MSHSBView.m; sourceTree = "<group>"; };
+		E22B0ACF207B7DFC00B3F331 /* MSRGBView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MSRGBView.h; sourceTree = "<group>"; };
+		E22B0AD0207B7DFC00B3F331 /* MSRGBView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MSRGBView.m; sourceTree = "<group>"; };
+		E22B0AD1207B7DFC00B3F331 /* MSSliderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MSSliderView.h; sourceTree = "<group>"; };
+		E22B0AD2207B7DFC00B3F331 /* MSSliderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MSSliderView.m; sourceTree = "<group>"; };
 		E28A0E1B2075FC2A001B4F82 /* Iot.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Iot.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E28A0E1E2075FC2A001B4F82 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		E28A0E1F2075FC2A001B4F82 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -254,6 +280,7 @@
 		E22B0A662076122100B3F331 /* Utils */ = {
 			isa = PBXGroup;
 			children = (
+				E22B0AC0207B7DFC00B3F331 /* MSColorPicker */,
 				E22B0ABE207B62D700B3F331 /* Configuration.json */,
 				E22B0A8020764C2A00B3F331 /* UITextView+Placeholder.h */,
 				E22B0A8120764C2A00B3F331 /* UITextView+Placeholder.m */,
@@ -345,6 +372,32 @@
 			);
 			path = DevicesTableView;
 			sourceTree = "<group>";
+		};
+		E22B0AC0207B7DFC00B3F331 /* MSColorPicker */ = {
+			isa = PBXGroup;
+			children = (
+				E22B0AC1207B7DFC00B3F331 /* MSColorComponentView.h */,
+				E22B0AC2207B7DFC00B3F331 /* MSColorComponentView.m */,
+				E22B0AC3207B7DFC00B3F331 /* MSColorPicker.h */,
+				E22B0AC4207B7DFC00B3F331 /* MSColorSelectionView.h */,
+				E22B0AC5207B7DFC00B3F331 /* MSColorSelectionView.m */,
+				E22B0AC6207B7DFC00B3F331 /* MSColorSelectionViewController.h */,
+				E22B0AC7207B7DFC00B3F331 /* MSColorSelectionViewController.m */,
+				E22B0AC8207B7DFC00B3F331 /* MSColorUtils.h */,
+				E22B0AC9207B7DFC00B3F331 /* MSColorUtils.m */,
+				E22B0ACA207B7DFC00B3F331 /* MSColorView.h */,
+				E22B0ACB207B7DFC00B3F331 /* MSColorWheelView.h */,
+				E22B0ACC207B7DFC00B3F331 /* MSColorWheelView.m */,
+				E22B0ACD207B7DFC00B3F331 /* MSHSBView.h */,
+				E22B0ACE207B7DFC00B3F331 /* MSHSBView.m */,
+				E22B0ACF207B7DFC00B3F331 /* MSRGBView.h */,
+				E22B0AD0207B7DFC00B3F331 /* MSRGBView.m */,
+				E22B0AD1207B7DFC00B3F331 /* MSSliderView.h */,
+				E22B0AD2207B7DFC00B3F331 /* MSSliderView.m */,
+			);
+			name = MSColorPicker;
+			path = Iot/Classes/MSColorPicker;
+			sourceTree = SOURCE_ROOT;
 		};
 		E28A0E122075FC2A001B4F82 = {
 			isa = PBXGroup;
@@ -606,8 +659,11 @@
 				E22B0AB2207773BD00B3F331 /* IotDevicesTableViewBublCell.m in Sources */,
 				E22B0ABA2077A8F100B3F331 /* IotTableViewDataSource.m in Sources */,
 				E22B0A94207759ED00B3F331 /* IotSpeechRecognizer.m in Sources */,
+				E22B0AD3207B7DFC00B3F331 /* MSColorComponentView.m in Sources */,
 				E22B0AA020776A0700B3F331 /* IotDataSensorDTO.m in Sources */,
+				E22B0AD5207B7DFC00B3F331 /* MSColorSelectionViewController.m in Sources */,
 				E28A0E2E2075FC2A001B4F82 /* main.m in Sources */,
+				E22B0AD9207B7DFC00B3F331 /* MSRGBView.m in Sources */,
 				E22B0A58207606E600B3F331 /* IotUIManager.m in Sources */,
 				E22B0A7F207648E500B3F331 /* HPGrowingTextView.m in Sources */,
 				E22B0A7E207648E500B3F331 /* HPTextViewInternal.m in Sources */,
@@ -616,10 +672,15 @@
 				E22B0AA920776A3B00B3F331 /* IotConversationAnswerOutDTO.m in Sources */,
 				E22B0A7C207648E500B3F331 /* IotConversationInputViewModel.m in Sources */,
 				E22B0A7B207648E500B3F331 /* DAKeyboardControl.m in Sources */,
+				E22B0ADA207B7DFC00B3F331 /* MSSliderView.m in Sources */,
 				E22B0AA320776A1800B3F331 /* IotXDKDTO.m in Sources */,
 				E22B0A6520760AA200B3F331 /* IotDevicesViewController.m in Sources */,
+				E22B0AD8207B7DFC00B3F331 /* MSHSBView.m in Sources */,
 				E22B0A8D20765E7500B3F331 /* IotServerProvider.m in Sources */,
+				E22B0AD7207B7DFC00B3F331 /* MSColorWheelView.m in Sources */,
+				E22B0AD6207B7DFC00B3F331 /* MSColorUtils.m in Sources */,
 				E22B0AB720779F8C00B3F331 /* IotDevicesTableViewDataSource.m in Sources */,
+				E22B0AD4207B7DFC00B3F331 /* MSColorSelectionView.m in Sources */,
 				E28A0E202075FC2A001B4F82 /* AppDelegate.m in Sources */,
 				E22B0A6B2076124A00B3F331 /* IotEndpoints.m in Sources */,
 				E22B0AA620776A2B00B3F331 /* IotWrapperDTO.m in Sources */,

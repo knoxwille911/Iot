@@ -14,6 +14,8 @@
 @protocol IotConversationInputViewDelegate
 
 -(void)sendTextMessage:(NSString *)textMessage;
+-(void)sendButtonLongTapBegan;
+-(void)sendButtonLongTapEnded;
 
 @end
 

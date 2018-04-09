@@ -7,6 +7,7 @@
 //
 
 #import "IotDevicesTableViewDeviceCell.h"
+#import "UIColor+SPColors.h"
 
 static NSString *kIotDevicesTableViewDeviceCellIconName = @"conversation_Button-paper-plane";
 
@@ -25,7 +26,7 @@ static NSString *kIotDevicesTableViewDeviceCellUpdateButtonPressedIconName = @"c
 
 
 - (void)setupUI {
-    self.backgroundColor = UIColor.redColor;
+    self.backgroundColor = [UIColor devicesListCellBackgroundColor];
     UIView *separatorView;
     //top view
     {
@@ -38,7 +39,7 @@ static NSString *kIotDevicesTableViewDeviceCellUpdateButtonPressedIconName = @"c
         
         self.deviceNameLabel = [UILabel new];
         self.deviceNameLabel.translatesAutoresizingMaskIntoConstraints = NO;
-        self.deviceNameLabel.textColor = [UIColor whiteColor];
+        self.deviceNameLabel.textColor = [UIColor devicesListTitleTextColor];
         self.deviceNameLabel.font = [self titleLabelFont];
         [self.contentView addSubview:self.deviceNameLabel];
         
@@ -48,7 +49,7 @@ static NSString *kIotDevicesTableViewDeviceCellUpdateButtonPressedIconName = @"c
         
         separatorView = [UIView new];
         separatorView.translatesAutoresizingMaskIntoConstraints = NO;
-        separatorView.backgroundColor = [UIColor whiteColor];
+        separatorView.backgroundColor = [UIColor devicesListSeparatorColor];
         [self.contentView addSubview:separatorView];
         
         [separatorView.leadingAnchor constraintEqualToAnchor:self.contentView.leadingAnchor constant:0].active = YES;
@@ -60,7 +61,7 @@ static NSString *kIotDevicesTableViewDeviceCellUpdateButtonPressedIconName = @"c
     {
         self.deviceIDTitleLabel = [UILabel new];
         self.deviceIDTitleLabel.translatesAutoresizingMaskIntoConstraints = NO;
-        self.deviceIDTitleLabel.textColor = [UIColor whiteColor];
+        self.deviceIDTitleLabel.textColor = [UIColor devicesListTitleTextColor];
         self.deviceIDTitleLabel.font = [self titleLabelFont];
         [self.contentView addSubview:self.deviceIDTitleLabel];
         
@@ -70,7 +71,7 @@ static NSString *kIotDevicesTableViewDeviceCellUpdateButtonPressedIconName = @"c
         
         self.deviceIDValueLabel = [UILabel new];
         self.deviceIDValueLabel.translatesAutoresizingMaskIntoConstraints = NO;
-        self.deviceIDValueLabel.textColor = [UIColor whiteColor];
+        self.deviceIDValueLabel.textColor = [UIColor devicesListValueTextColor];
         self.deviceIDValueLabel.font = [self titleLabelFont];
         [self.contentView addSubview:self.deviceIDValueLabel];
         
@@ -80,7 +81,7 @@ static NSString *kIotDevicesTableViewDeviceCellUpdateButtonPressedIconName = @"c
     {
         self.deviceLightTitleLabel = [UILabel new];
         self.deviceLightTitleLabel.translatesAutoresizingMaskIntoConstraints = NO;
-        self.deviceLightTitleLabel.textColor = [UIColor whiteColor];
+        self.deviceLightTitleLabel.textColor = [UIColor devicesListTitleTextColor];
         self.deviceLightTitleLabel.font = [self titleLabelFont];
         [self.contentView addSubview:self.deviceLightTitleLabel];
         
@@ -90,7 +91,7 @@ static NSString *kIotDevicesTableViewDeviceCellUpdateButtonPressedIconName = @"c
         
         self.deviceLightValueLabel = [UILabel new];
         self.deviceLightValueLabel.translatesAutoresizingMaskIntoConstraints = NO;
-        self.deviceLightValueLabel.textColor = [UIColor whiteColor];
+        self.deviceLightValueLabel.textColor = [UIColor devicesListValueTextColor];
         self.deviceLightValueLabel.font = [self titleLabelFont];
         [self.contentView addSubview:self.deviceLightValueLabel];
         
@@ -100,7 +101,7 @@ static NSString *kIotDevicesTableViewDeviceCellUpdateButtonPressedIconName = @"c
     {
         self.deviceTemperatureTitleLabel = [UILabel new];
         self.deviceTemperatureTitleLabel.translatesAutoresizingMaskIntoConstraints = NO;
-        self.deviceTemperatureTitleLabel.textColor = [UIColor whiteColor];
+        self.deviceTemperatureTitleLabel.textColor = [UIColor devicesListTitleTextColor];
         self.deviceTemperatureTitleLabel.font = [self titleLabelFont];
         [self.contentView addSubview:self.deviceTemperatureTitleLabel];
         
@@ -110,7 +111,7 @@ static NSString *kIotDevicesTableViewDeviceCellUpdateButtonPressedIconName = @"c
         
         self.deviceTemperatureValueLabel = [UILabel new];
         self.deviceTemperatureValueLabel.translatesAutoresizingMaskIntoConstraints = NO;
-        self.deviceTemperatureValueLabel.textColor = [UIColor whiteColor];
+        self.deviceTemperatureValueLabel.textColor = [UIColor devicesListValueTextColor];
         self.deviceTemperatureValueLabel.font = [self titleLabelFont];
         [self.contentView addSubview:self.deviceTemperatureValueLabel];
         
@@ -120,7 +121,7 @@ static NSString *kIotDevicesTableViewDeviceCellUpdateButtonPressedIconName = @"c
     {
         self.devicePresureTitleLabel = [UILabel new];
         self.devicePresureTitleLabel.translatesAutoresizingMaskIntoConstraints = NO;
-        self.devicePresureTitleLabel.textColor = [UIColor whiteColor];
+        self.devicePresureTitleLabel.textColor = [UIColor devicesListTitleTextColor];
         self.devicePresureTitleLabel.font = [self titleLabelFont];
         [self.contentView addSubview:self.devicePresureTitleLabel];
         
@@ -130,7 +131,7 @@ static NSString *kIotDevicesTableViewDeviceCellUpdateButtonPressedIconName = @"c
         
         self.devicePresureValueLabel = [UILabel new];
         self.devicePresureValueLabel.translatesAutoresizingMaskIntoConstraints = NO;
-        self.devicePresureValueLabel.textColor = [UIColor whiteColor];
+        self.devicePresureValueLabel.textColor = [UIColor devicesListValueTextColor];
         self.devicePresureValueLabel.font = [self titleLabelFont];
         [self.contentView addSubview:self.devicePresureValueLabel];
         
@@ -140,7 +141,7 @@ static NSString *kIotDevicesTableViewDeviceCellUpdateButtonPressedIconName = @"c
     {
         self.deviceHumidityTitleLabel = [UILabel new];
         self.deviceHumidityTitleLabel.translatesAutoresizingMaskIntoConstraints = NO;
-        self.deviceHumidityTitleLabel.textColor = [UIColor whiteColor];
+        self.deviceHumidityTitleLabel.textColor = [UIColor devicesListTitleTextColor];
         self.deviceHumidityTitleLabel.font = [self titleLabelFont];
         [self.contentView addSubview:self.deviceHumidityTitleLabel];
         
@@ -150,7 +151,7 @@ static NSString *kIotDevicesTableViewDeviceCellUpdateButtonPressedIconName = @"c
         
         self.deviceHumidityValueLabel = [UILabel new];
         self.deviceHumidityValueLabel.translatesAutoresizingMaskIntoConstraints = NO;
-        self.deviceHumidityValueLabel.textColor = [UIColor whiteColor];
+        self.deviceHumidityValueLabel.textColor = [UIColor devicesListValueTextColor];
         self.deviceHumidityValueLabel.font = [self titleLabelFont];
         [self.contentView addSubview:self.deviceHumidityValueLabel];
         
@@ -160,7 +161,7 @@ static NSString *kIotDevicesTableViewDeviceCellUpdateButtonPressedIconName = @"c
     {
         self.deviceTimestampLabel = [UILabel new];
         self.deviceTimestampLabel.translatesAutoresizingMaskIntoConstraints = NO;
-        self.deviceTimestampLabel.textColor = [UIColor whiteColor];
+        self.deviceTimestampLabel.textColor = [UIColor devicesListTitleTextColor];
         self.deviceTimestampLabel.font = [self titleLabelFont];
         [self.contentView addSubview:self.deviceTimestampLabel];
         
@@ -170,7 +171,7 @@ static NSString *kIotDevicesTableViewDeviceCellUpdateButtonPressedIconName = @"c
         
         self.deviceTimestampValueLabel = [UILabel new];
         self.deviceTimestampValueLabel.translatesAutoresizingMaskIntoConstraints = NO;
-        self.deviceTimestampValueLabel.textColor = [UIColor whiteColor];
+        self.deviceTimestampValueLabel.textColor = [UIColor devicesListValueTextColor];
         self.deviceTimestampValueLabel.font = [self titleLabelFont];
         [self.contentView addSubview:self.deviceTimestampValueLabel];
         
@@ -180,7 +181,7 @@ static NSString *kIotDevicesTableViewDeviceCellUpdateButtonPressedIconName = @"c
     //bottom view
     UIView *bottomSeparatorView = [UIView new];
     bottomSeparatorView.translatesAutoresizingMaskIntoConstraints = NO;
-    bottomSeparatorView.backgroundColor = [UIColor whiteColor];
+    bottomSeparatorView.backgroundColor = [UIColor devicesListSeparatorColor];
     [self.contentView addSubview:bottomSeparatorView];
     
     [bottomSeparatorView.leadingAnchor constraintEqualToAnchor:self.contentView.leadingAnchor constant:0].active = YES;
@@ -219,6 +220,24 @@ static NSString *kIotDevicesTableViewDeviceCellUpdateButtonPressedIconName = @"c
 
 -(CGFloat)titlelabelTopOffset {
     return 7.0f;
+}
+
+
+-(void)prepareForReuse {
+    [super prepareForReuse];
+    self.deviceNameLabel.text = nil;
+    self.deviceIDTitleLabel.text = nil;
+    self.deviceIDValueLabel.text = nil;
+    self.deviceLightTitleLabel.text = nil;
+    self.deviceLightValueLabel.text = nil;
+    self.deviceTemperatureTitleLabel.text = nil;
+    self.deviceTemperatureValueLabel.text = nil;
+    self.devicePresureTitleLabel.text = nil;
+    self.devicePresureValueLabel.text = nil;
+    self.deviceHumidityTitleLabel.text = nil;
+    self.deviceHumidityValueLabel.text = nil;
+    self.deviceTimestampLabel.text = nil;
+    self.deviceTimestampValueLabel.text = nil;
 }
 
 @end

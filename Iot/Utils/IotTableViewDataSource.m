@@ -18,9 +18,10 @@
 
 @implementation IotTableViewDataSource
 
--(instancetype)initWithTableView:(UITableView *)tableView {
+-(instancetype)initWithTableView:(UITableView *)tableView targetViewControler:(UIViewController *)viewController {
     if (self = [super init]) {
         self.tableView = tableView;
+        self.targetViewController = viewController;
     }
     return self;
 }

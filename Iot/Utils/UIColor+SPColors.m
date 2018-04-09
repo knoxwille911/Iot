@@ -26,12 +26,12 @@
 #pragma mark - common colors
 
 +(UIColor *)tabBarBackgroundColor {
-    return UIColorFromRGB(0x253345);
+    return UIColorFromRGB(0x3f5f78);
 }
 
 
 +(UIColor *)tabBarTitleTextColor {
-    return UIColorFromRGB(0xabb5c0);
+    return UIColorFromRGB(0x9fbfd6);
 }
 
 
@@ -41,7 +41,7 @@
 
 
 +(UIColor *)navigationBarBackgroundColor {
-    return UIColorFromRGB(0x16273a);
+    return UIColorFromRGB(0x5b88ac);
 }
 
 
@@ -56,135 +56,40 @@
 
 
 +(UIColor *)navigationBarShadowColor {
+    return UIColorFromRGB(0xffffff);
+}
+
+
+#pragma devices list
+
++(UIColor *)devicesListCellBackgroundColor {
+    return UIColorFromRGB(0x5b88ac);
+}
+
+
++(UIColor *)devicesListTitleTextColor {
     return UIColorFromRGB(0x000000);
 }
 
 
-#pragma mark - root view controller colors
-
-+(UIColor *)rootTableViewTextColor {
-    return UIColorFromRGB(0xffffff);
++(UIColor *)devicesListValueTextColor {
+    return UIColorFromRGB(0x000000);
 }
 
 
-#pragma mark - test results table view colors
-
-+(UIColor *)testResultsTableViewBackgroundColor {
-    return UIColor.clearColor;
-}
-
-+(UIColor *)testResultsTableViewCellBackgroundColor {
-    return [UIColorFromRGB(0x3c699a) colorWithAlphaComponent:0.2f];
-}
-
-+(UIColor *)testResultsTableViewCellTextColor {
-    return UIColorFromRGB(0xffffff);
-}
-
-+(UIColor *)testResultsTableViewCellHeaderColor {
-    return UIColor.clearColor;
++(UIColor *)devicesListSeparatorColor {
+    return UIColorFromRGB(0x000000);
 }
 
 
-#pragma mark - latency test view controller colors
-
-+(UIColor *)latencyTestHostLabelColor {
-    return UIColorFromRGB(0xffffff);
-}
-
-+(UIColor *)latencyTestHostFieldBackgroundColor {
-    return UIColorFromRGB(0xe8e8e8);
-}
-
-+(UIColor *)latencyTestHostFieldTextColor {
-    return UIColorFromRGB(0x6b6b6b);
-}
-
-+(UIColor *)latencyTestHostFieldBorderColor {
-    return UIColorFromRGB(0x325883);
-}
-
-
-#pragma mark - ftp view controller colors
-
-+(UIColor *)ftpTestBackgroundColor {
-    return UIColorFromRGB(0xffffff);
-}
-
-
-#pragma mark - youtube test view controller colors
-
-+(UIColor *)youtubeTestPlayerBorderColor {
-    return UIColorFromRGB(0x325883);
-}
-
-
-#pragma mark - banners
-+(UIColor *)redBannerColor {
-    return UIColorFromRGB(0xac2020);
-}
-
-
-+(UIColor *)blueBannerColor {
-    return UIColorFromRGB(0x3c699a);
-}
-
-
-#pragma mark - speedview
-+(UIColor *)speedViewDefaultColor {
-    return UIColorFromRGB(0x1d2738);
-}
-
-
-+(UIColor *)speedViewHighlightColor {
-    return UIColorFromRGB(0x3f6a9a);
-}
-
-
-+(UIColor *)speedViewTitleColor {
-    return UIColorFromRGB(0xffffff);
-}
-
-
-+(UIColor *)speedViewPeakPointColor {
-    return UIColorFromRGB(0xac2020);
-}
-
-
-+(UIColor *)speedViewBigDividerPointColor {
-    return UIColorFromRGB(0xffffff);
-}
-
-
-+(UIColor *)speedViewSmallDividerPointColor {
-    return UIColorFromRGB(0x3f6a9a);
-}
-
-
-#pragma mark - history
-+(UIColor *)historyCellBackgroundColor {
-    return UIColorFromRGB(0x0d1622);
-}
-
-
-+(UIColor *)historySectionTitleTextColor {
-    return UIColorFromRGB(0xabb5c0);
-}
-
-
-+(UIColor *)historyCellTextColor {
-    return UIColorFromRGB(0xffffff);
-}
-
-
-+(UIColor *)historyDetailVCBackgroundColor {
-    return UIColorFromRGB(0x0d1622);
++(UIColor *)deviceListControllerBackgroundColor {
+    return UIColorFromRGB(0x5b88ac);
 }
 
 
 #pragma mark conversation
 +(UIColor *)conversationInputViewTextViewBackgroundColor {
-    return UIColorFromRGB(0x282a41);
+    return UIColorFromRGB(0x9fbfd6);
 }
 
 
@@ -194,12 +99,12 @@
 
 
 +(UIColor *)conversationInputViewTextViewBorderColor {
-    return UIColorFromRGB(0x1ABDB3);
+    return UIColorFromRGB(0x3f5f78);
 }
 
 
 +(UIColor *)conversationInputViewPlaceholderColor {
-    return UIColorFromRGB(0x8d90a6);
+    return UIColorFromRGB(0x3f5f78);
 }
 
 +(UIColor *)conversationInputViewTextTextColor {
@@ -208,7 +113,13 @@
 
 
 +(UIColor *)conversationInputViewBackgroundColor {
-    return UIColorFromRGB(0x201e2A);
+    //return UIColorFromRGB(0x201e2A);
+    return [UIColor clearColor];
+}
+
+
++(UIColor *)conversationControllerBackgroundColor {
+    return UIColorFromRGB(0x5b88ac);
 }
 
 @end

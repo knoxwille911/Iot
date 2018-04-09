@@ -10,6 +10,7 @@
 #import "IotConversationInputViewModel.h"
 #import "IotSpeechRecognizer.h"
 #import "IotInjectorContainer.h"
+#import "UIColor+SPColors.h"
 
 @interface IotConversationDetailViewController ()<IotConversationInputViewDelegate> {
     IotConversationInputViewModel *_inputViewModel;
@@ -21,20 +22,20 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+    self.title = NSLocalizedString(@"Ella", @"Ella");
     [self addInputBar];
 }
 
 
 -(void)addInputBar {
+    
+    self.view.backgroundColor = [UIColor conversationControllerBackgroundColor];
+    
     _inputViewModel = [[IotConversationInputViewModel alloc] initWithTargetViewController:self delegate:self];
     [_inputViewModel attachToView:self.view];
 }
 
-
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
-}
 
 -(void)sendTextMessage:(NSString *)textMessage {
     
