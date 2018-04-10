@@ -11,5 +11,7 @@
 @protocol IotUIManagerProtocol<NSObject>
 
 -(void)commonInit;
+-(void)showHelloAlertForViewController:(UIViewController *)viewController;
+-(UITabBarController *)tabbarController;
 
 @end

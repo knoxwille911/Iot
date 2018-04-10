@@ -8,6 +8,14 @@
 
 /* Begin PBXBuildFile section */
 		336ED95C690BB4D64A5D1E72 /* libPods-Iot.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 68DBECA4FA480932649B3878 /* libPods-Iot.a */; };
+		E2265AED207C9B38002422A0 /* IotConversationDetailTableViewWrapperView.m in Sources */ = {isa = PBXBuildFile; fileRef = E2265AEC207C9B38002422A0 /* IotConversationDetailTableViewWrapperView.m */; };
+		E2265AF0207C9C04002422A0 /* IotConversationDetailTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = E2265AEF207C9C04002422A0 /* IotConversationDetailTableViewCell.m */; };
+		E2265AF3207C9C4D002422A0 /* IotConversationDetailBubbleView.m in Sources */ = {isa = PBXBuildFile; fileRef = E2265AF2207C9C4D002422A0 /* IotConversationDetailBubbleView.m */; };
+		E2265AF6207C9CFA002422A0 /* IotConversationDetailMessageUIInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = E2265AF5207C9CFA002422A0 /* IotConversationDetailMessageUIInfo.m */; };
+		E2265AFA207C9FE0002422A0 /* IotConversationDetailTextBubbleView.m in Sources */ = {isa = PBXBuildFile; fileRef = E2265AF9207C9FE0002422A0 /* IotConversationDetailTextBubbleView.m */; };
+		E2265AFE207CA423002422A0 /* IotConversationDetailTableViewCell+Layout.m in Sources */ = {isa = PBXBuildFile; fileRef = E2265AFD207CA423002422A0 /* IotConversationDetailTableViewCell+Layout.m */; };
+		E2265B02207CB195002422A0 /* IotConversationDetailDataController.m in Sources */ = {isa = PBXBuildFile; fileRef = E2265B01207CB195002422A0 /* IotConversationDetailDataController.m */; };
+		E2265B05207CBFE3002422A0 /* IotConversationDetailTableViewDataSourse.m in Sources */ = {isa = PBXBuildFile; fileRef = E2265B04207CBFE3002422A0 /* IotConversationDetailTableViewDataSourse.m */; };
 		E22B0A522076057500B3F331 /* Podfile in Resources */ = {isa = PBXBuildFile; fileRef = E22B0A512076057400B3F331 /* Podfile */; };
 		E22B0A58207606E600B3F331 /* IotUIManager.m in Sources */ = {isa = PBXBuildFile; fileRef = E22B0A56207606E600B3F331 /* IotUIManager.m */; };
 		E22B0A5C20760A4700B3F331 /* IotConversationDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E22B0A5B20760A4700B3F331 /* IotConversationDetailViewController.m */; };
@@ -75,6 +83,22 @@
 		19B3209F1DD9D9E10F044F8C /* Pods-Iot.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Iot.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Iot/Pods-Iot.debug.xcconfig"; sourceTree = "<group>"; };
 		68DBECA4FA480932649B3878 /* libPods-Iot.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Iot.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		6A2E0D9F786EE6B2E8B7C7D3 /* Pods-Iot.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Iot.release.xcconfig"; path = "Pods/Target Support Files/Pods-Iot/Pods-Iot.release.xcconfig"; sourceTree = "<group>"; };
+		E2265AEB207C9B38002422A0 /* IotConversationDetailTableViewWrapperView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = IotConversationDetailTableViewWrapperView.h; sourceTree = "<group>"; };
+		E2265AEC207C9B38002422A0 /* IotConversationDetailTableViewWrapperView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = IotConversationDetailTableViewWrapperView.m; sourceTree = "<group>"; };
+		E2265AEE207C9C04002422A0 /* IotConversationDetailTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = IotConversationDetailTableViewCell.h; sourceTree = "<group>"; };
+		E2265AEF207C9C04002422A0 /* IotConversationDetailTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = IotConversationDetailTableViewCell.m; sourceTree = "<group>"; };
+		E2265AF1207C9C4D002422A0 /* IotConversationDetailBubbleView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = IotConversationDetailBubbleView.h; sourceTree = "<group>"; };
+		E2265AF2207C9C4D002422A0 /* IotConversationDetailBubbleView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = IotConversationDetailBubbleView.m; sourceTree = "<group>"; };
+		E2265AF4207C9CFA002422A0 /* IotConversationDetailMessageUIInfo.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = IotConversationDetailMessageUIInfo.h; sourceTree = "<group>"; };
+		E2265AF5207C9CFA002422A0 /* IotConversationDetailMessageUIInfo.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = IotConversationDetailMessageUIInfo.m; sourceTree = "<group>"; };
+		E2265AF8207C9FE0002422A0 /* IotConversationDetailTextBubbleView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = IotConversationDetailTextBubbleView.h; sourceTree = "<group>"; };
+		E2265AF9207C9FE0002422A0 /* IotConversationDetailTextBubbleView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = IotConversationDetailTextBubbleView.m; sourceTree = "<group>"; };
+		E2265AFC207CA423002422A0 /* IotConversationDetailTableViewCell+Layout.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "IotConversationDetailTableViewCell+Layout.h"; sourceTree = "<group>"; };
+		E2265AFD207CA423002422A0 /* IotConversationDetailTableViewCell+Layout.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "IotConversationDetailTableViewCell+Layout.m"; sourceTree = "<group>"; };
+		E2265B00207CB195002422A0 /* IotConversationDetailDataController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = IotConversationDetailDataController.h; sourceTree = "<group>"; };
+		E2265B01207CB195002422A0 /* IotConversationDetailDataController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = IotConversationDetailDataController.m; sourceTree = "<group>"; };
+		E2265B03207CBFE3002422A0 /* IotConversationDetailTableViewDataSourse.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = IotConversationDetailTableViewDataSourse.h; sourceTree = "<group>"; };
+		E2265B04207CBFE3002422A0 /* IotConversationDetailTableViewDataSourse.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = IotConversationDetailTableViewDataSourse.m; sourceTree = "<group>"; };
 		E22B0A512076057400B3F331 /* Podfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		E22B0A55207606E600B3F331 /* IotUIManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = IotUIManager.h; path = Iot/Classes/IotUIManager.h; sourceTree = SOURCE_ROOT; };
 		E22B0A56207606E600B3F331 /* IotUIManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = IotUIManager.m; path = Iot/Classes/IotUIManager.m; sourceTree = SOURCE_ROOT; };
@@ -215,6 +239,52 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		E2265AEA207C9A9A002422A0 /* ConversationDetailTableViewWrapper */ = {
+			isa = PBXGroup;
+			children = (
+				E2265AFB207CA406002422A0 /* ConversationDetailCell */,
+				E2265AF7207C9FC8002422A0 /* ConversationBubbles */,
+				E2265AEB207C9B38002422A0 /* IotConversationDetailTableViewWrapperView.h */,
+				E2265AEC207C9B38002422A0 /* IotConversationDetailTableViewWrapperView.m */,
+				E2265AF4207C9CFA002422A0 /* IotConversationDetailMessageUIInfo.h */,
+				E2265AF5207C9CFA002422A0 /* IotConversationDetailMessageUIInfo.m */,
+				E2265B03207CBFE3002422A0 /* IotConversationDetailTableViewDataSourse.h */,
+				E2265B04207CBFE3002422A0 /* IotConversationDetailTableViewDataSourse.m */,
+			);
+			path = ConversationDetailTableViewWrapper;
+			sourceTree = "<group>";
+		};
+		E2265AF7207C9FC8002422A0 /* ConversationBubbles */ = {
+			isa = PBXGroup;
+			children = (
+				E2265AF1207C9C4D002422A0 /* IotConversationDetailBubbleView.h */,
+				E2265AF2207C9C4D002422A0 /* IotConversationDetailBubbleView.m */,
+				E2265AF8207C9FE0002422A0 /* IotConversationDetailTextBubbleView.h */,
+				E2265AF9207C9FE0002422A0 /* IotConversationDetailTextBubbleView.m */,
+			);
+			path = ConversationBubbles;
+			sourceTree = "<group>";
+		};
+		E2265AFB207CA406002422A0 /* ConversationDetailCell */ = {
+			isa = PBXGroup;
+			children = (
+				E2265AEE207C9C04002422A0 /* IotConversationDetailTableViewCell.h */,
+				E2265AEF207C9C04002422A0 /* IotConversationDetailTableViewCell.m */,
+				E2265AFC207CA423002422A0 /* IotConversationDetailTableViewCell+Layout.h */,
+				E2265AFD207CA423002422A0 /* IotConversationDetailTableViewCell+Layout.m */,
+			);
+			path = ConversationDetailCell;
+			sourceTree = "<group>";
+		};
+		E2265AFF207CB179002422A0 /* ConversationDetailDataController */ = {
+			isa = PBXGroup;
+			children = (
+				E2265B00207CB195002422A0 /* IotConversationDetailDataController.h */,
+				E2265B01207CB195002422A0 /* IotConversationDetailDataController.m */,
+			);
+			path = ConversationDetailDataController;
+			sourceTree = "<group>";
+		};
 		E22B0A532076067200B3F331 /* InjectorContainer */ = {
 			isa = PBXGroup;
 			children = (
@@ -251,6 +321,8 @@
 		E22B0A5D20760A4E00B3F331 /* ConversationDetail */ = {
 			isa = PBXGroup;
 			children = (
+				E2265AFF207CB179002422A0 /* ConversationDetailDataController */,
+				E2265AEA207C9A9A002422A0 /* ConversationDetailTableViewWrapper */,
 				E22B0A70207648D200B3F331 /* InputView */,
 				E22B0A5A20760A4700B3F331 /* IotConversationDetailViewController.h */,
 				E22B0A5B20760A4700B3F331 /* IotConversationDetailViewController.m */,
@@ -649,6 +721,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E2265AF6207C9CFA002422A0 /* IotConversationDetailMessageUIInfo.m in Sources */,
 				E22B0A6F207616EC00B3F331 /* IotInjectorContainer.m in Sources */,
 				E22B0A6120760A8000B3F331 /* IotNotificationsViewController.m in Sources */,
 				E28A0E232075FC2A001B4F82 /* ViewController.m in Sources */,
@@ -660,12 +733,17 @@
 				E22B0ABA2077A8F100B3F331 /* IotTableViewDataSource.m in Sources */,
 				E22B0A94207759ED00B3F331 /* IotSpeechRecognizer.m in Sources */,
 				E22B0AD3207B7DFC00B3F331 /* MSColorComponentView.m in Sources */,
+				E2265AF3207C9C4D002422A0 /* IotConversationDetailBubbleView.m in Sources */,
+				E2265B05207CBFE3002422A0 /* IotConversationDetailTableViewDataSourse.m in Sources */,
 				E22B0AA020776A0700B3F331 /* IotDataSensorDTO.m in Sources */,
 				E22B0AD5207B7DFC00B3F331 /* MSColorSelectionViewController.m in Sources */,
 				E28A0E2E2075FC2A001B4F82 /* main.m in Sources */,
+				E2265AFE207CA423002422A0 /* IotConversationDetailTableViewCell+Layout.m in Sources */,
+				E2265AF0207C9C04002422A0 /* IotConversationDetailTableViewCell.m in Sources */,
 				E22B0AD9207B7DFC00B3F331 /* MSRGBView.m in Sources */,
 				E22B0A58207606E600B3F331 /* IotUIManager.m in Sources */,
 				E22B0A7F207648E500B3F331 /* HPGrowingTextView.m in Sources */,
+				E2265AFA207C9FE0002422A0 /* IotConversationDetailTextBubbleView.m in Sources */,
 				E22B0A7E207648E500B3F331 /* HPTextViewInternal.m in Sources */,
 				E22B0A6C2076124A00B3F331 /* UIColor+SPColors.m in Sources */,
 				E22B0A5C20760A4700B3F331 /* IotConversationDetailViewController.m in Sources */,
@@ -678,11 +756,13 @@
 				E22B0AD8207B7DFC00B3F331 /* MSHSBView.m in Sources */,
 				E22B0A8D20765E7500B3F331 /* IotServerProvider.m in Sources */,
 				E22B0AD7207B7DFC00B3F331 /* MSColorWheelView.m in Sources */,
+				E2265B02207CB195002422A0 /* IotConversationDetailDataController.m in Sources */,
 				E22B0AD6207B7DFC00B3F331 /* MSColorUtils.m in Sources */,
 				E22B0AB720779F8C00B3F331 /* IotDevicesTableViewDataSource.m in Sources */,
 				E22B0AD4207B7DFC00B3F331 /* MSColorSelectionView.m in Sources */,
 				E28A0E202075FC2A001B4F82 /* AppDelegate.m in Sources */,
 				E22B0A6B2076124A00B3F331 /* IotEndpoints.m in Sources */,
+				E2265AED207C9B38002422A0 /* IotConversationDetailTableViewWrapperView.m in Sources */,
 				E22B0AA620776A2B00B3F331 /* IotWrapperDTO.m in Sources */,
 				E22B0A8220764C2A00B3F331 /* UITextView+Placeholder.m in Sources */,
 			);
@@ -849,8 +929,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = M74C89B4XB;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/Iot//PrefixHeader.pch";
 				INFOPLIST_FILE = Iot/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = DMTech.Iot;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -864,8 +946,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = M74C89B4XB;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/Iot//PrefixHeader.pch";
 				INFOPLIST_FILE = Iot/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = DMTech.Iot;
 				PRODUCT_NAME = "$(TARGET_NAME)";

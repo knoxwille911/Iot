@@ -41,5 +41,8 @@
 +(UIColor *)conversationInputViewPlaceholderColor;
 +(UIColor *)conversationInputViewGalleryCellOverlayColor;
 +(UIColor *)conversationControllerBackgroundColor;
++(UIColor *)conversationDetailOutgoindBubbleBackgroundColor;
++(UIColor *)conversationDetailIncomingBubbleBackgroundColor;
++(UIColor *)conversationDetailSenderNameTitleColor;
 
 @end
