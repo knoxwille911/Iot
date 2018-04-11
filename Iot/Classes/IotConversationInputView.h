@@ -28,6 +28,7 @@
 @property (nonatomic, strong) HPGrowingTextView *textView;
 @property (nonatomic, strong) UIButton *rightButton;
 
+-(void)setLongPressEnabled:(BOOL)enabled;
 -(void)resignFirstResponder;
 -(void)becomeFirstResponder;
 

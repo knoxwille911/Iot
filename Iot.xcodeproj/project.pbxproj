@@ -60,6 +60,15 @@
 		E28A0E2E2075FC2A001B4F82 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = E28A0E2D2075FC2A001B4F82 /* main.m */; };
 		E28A0E382075FC2A001B4F82 /* IotTests.m in Sources */ = {isa = PBXBuildFile; fileRef = E28A0E372075FC2A001B4F82 /* IotTests.m */; };
 		E28A0E432075FC2A001B4F82 /* IotUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = E28A0E422075FC2A001B4F82 /* IotUITests.m */; };
+		E995D1BD207C9F3500D881D6 /* IotRecordReflectorView.m in Sources */ = {isa = PBXBuildFile; fileRef = E995D1BC207C9F3500D881D6 /* IotRecordReflectorView.m */; };
+		E995D1BE207C9F3500D881D6 /* IotRecordReflectorView.m in Sources */ = {isa = PBXBuildFile; fileRef = E995D1BC207C9F3500D881D6 /* IotRecordReflectorView.m */; };
+		E995D1BF207C9F3500D881D6 /* IotRecordReflectorView.m in Sources */ = {isa = PBXBuildFile; fileRef = E995D1BC207C9F3500D881D6 /* IotRecordReflectorView.m */; };
+		E995D1C2207C9FC700D881D6 /* SCSiriWaveformView.m in Sources */ = {isa = PBXBuildFile; fileRef = E995D1C1207C9FC700D881D6 /* SCSiriWaveformView.m */; };
+		E995D1C3207C9FC700D881D6 /* SCSiriWaveformView.m in Sources */ = {isa = PBXBuildFile; fileRef = E995D1C1207C9FC700D881D6 /* SCSiriWaveformView.m */; };
+		E995D1C4207C9FC700D881D6 /* SCSiriWaveformView.m in Sources */ = {isa = PBXBuildFile; fileRef = E995D1C1207C9FC700D881D6 /* SCSiriWaveformView.m */; };
+		E995D1C9207CBA2800D881D6 /* IotRecordReflectorViewer.m in Sources */ = {isa = PBXBuildFile; fileRef = E995D1C8207CBA2800D881D6 /* IotRecordReflectorViewer.m */; };
+		E995D1CA207CBA2800D881D6 /* IotRecordReflectorViewer.m in Sources */ = {isa = PBXBuildFile; fileRef = E995D1C8207CBA2800D881D6 /* IotRecordReflectorViewer.m */; };
+		E995D1CB207CBA2800D881D6 /* IotRecordReflectorViewer.m in Sources */ = {isa = PBXBuildFile; fileRef = E995D1C8207CBA2800D881D6 /* IotRecordReflectorViewer.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -192,6 +201,12 @@
 		E28A0E3E2075FC2A001B4F82 /* IotUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = IotUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		E28A0E422075FC2A001B4F82 /* IotUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = IotUITests.m; sourceTree = "<group>"; };
 		E28A0E442075FC2A001B4F82 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E995D1BB207C9F3500D881D6 /* IotRecordReflectorView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = IotRecordReflectorView.h; sourceTree = "<group>"; };
+		E995D1BC207C9F3500D881D6 /* IotRecordReflectorView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = IotRecordReflectorView.m; sourceTree = "<group>"; };
+		E995D1C0207C9FC700D881D6 /* SCSiriWaveformView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SCSiriWaveformView.h; sourceTree = "<group>"; };
+		E995D1C1207C9FC700D881D6 /* SCSiriWaveformView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SCSiriWaveformView.m; sourceTree = "<group>"; };
+		E995D1C7207CBA2800D881D6 /* IotRecordReflectorViewer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = IotRecordReflectorViewer.h; sourceTree = "<group>"; };
+		E995D1C8207CBA2800D881D6 /* IotRecordReflectorViewer.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = IotRecordReflectorViewer.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -321,6 +336,7 @@
 		E22B0A5D20760A4E00B3F331 /* ConversationDetail */ = {
 			isa = PBXGroup;
 			children = (
+				E995D1BA207C9E0600D881D6 /* RecordReflectorView */,
 				E2265AFF207CB179002422A0 /* ConversationDetailDataController */,
 				E2265AEA207C9A9A002422A0 /* ConversationDetailTableViewWrapper */,
 				E22B0A70207648D200B3F331 /* InputView */,
@@ -532,6 +548,19 @@
 			path = IotUITests;
 			sourceTree = "<group>";
 		};
+		E995D1BA207C9E0600D881D6 /* RecordReflectorView */ = {
+			isa = PBXGroup;
+			children = (
+				E995D1C0207C9FC700D881D6 /* SCSiriWaveformView.h */,
+				E995D1C1207C9FC700D881D6 /* SCSiriWaveformView.m */,
+				E995D1BB207C9F3500D881D6 /* IotRecordReflectorView.h */,
+				E995D1BC207C9F3500D881D6 /* IotRecordReflectorView.m */,
+				E995D1C7207CBA2800D881D6 /* IotRecordReflectorViewer.h */,
+				E995D1C8207CBA2800D881D6 /* IotRecordReflectorViewer.m */,
+			);
+			path = RecordReflectorView;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -730,8 +759,10 @@
 				E22B0A9D207769D800B3F331 /* IotBulbDTO.m in Sources */,
 				E22B0A7D207648E500B3F331 /* IotConversationInputView.m in Sources */,
 				E22B0AB2207773BD00B3F331 /* IotDevicesTableViewBublCell.m in Sources */,
+				E995D1BD207C9F3500D881D6 /* IotRecordReflectorView.m in Sources */,
 				E22B0ABA2077A8F100B3F331 /* IotTableViewDataSource.m in Sources */,
 				E22B0A94207759ED00B3F331 /* IotSpeechRecognizer.m in Sources */,
+				E995D1C9207CBA2800D881D6 /* IotRecordReflectorViewer.m in Sources */,
 				E22B0AD3207B7DFC00B3F331 /* MSColorComponentView.m in Sources */,
 				E2265AF3207C9C4D002422A0 /* IotConversationDetailBubbleView.m in Sources */,
 				E2265B05207CBFE3002422A0 /* IotConversationDetailTableViewDataSourse.m in Sources */,
@@ -752,6 +783,7 @@
 				E22B0A7B207648E500B3F331 /* DAKeyboardControl.m in Sources */,
 				E22B0ADA207B7DFC00B3F331 /* MSSliderView.m in Sources */,
 				E22B0AA320776A1800B3F331 /* IotXDKDTO.m in Sources */,
+				E995D1C2207C9FC700D881D6 /* SCSiriWaveformView.m in Sources */,
 				E22B0A6520760AA200B3F331 /* IotDevicesViewController.m in Sources */,
 				E22B0AD8207B7DFC00B3F331 /* MSHSBView.m in Sources */,
 				E22B0A8D20765E7500B3F331 /* IotServerProvider.m in Sources */,
@@ -773,6 +805,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				E28A0E382075FC2A001B4F82 /* IotTests.m in Sources */,
+				E995D1CA207CBA2800D881D6 /* IotRecordReflectorViewer.m in Sources */,
+				E995D1BE207C9F3500D881D6 /* IotRecordReflectorView.m in Sources */,
+				E995D1C3207C9FC700D881D6 /* SCSiriWaveformView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -781,6 +816,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				E28A0E432075FC2A001B4F82 /* IotUITests.m in Sources */,
+				E995D1CB207CBA2800D881D6 /* IotRecordReflectorViewer.m in Sources */,
+				E995D1BF207C9F3500D881D6 /* IotRecordReflectorView.m in Sources */,
+				E995D1C4207C9FC700D881D6 /* SCSiriWaveformView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -928,14 +966,16 @@
 			baseConfigurationReference = 19B3209F1DD9D9E10F044F8C /* Pods-Iot.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = M74C89B4XB;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/Iot//PrefixHeader.pch";
 				INFOPLIST_FILE = Iot/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = DMTech.Iot;
+				PRODUCT_BUNDLE_IDENTIFIER = DMTech.Iotad;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -945,6 +985,7 @@
 			baseConfigurationReference = 6A2E0D9F786EE6B2E8B7C7D3 /* Pods-Iot.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = M74C89B4XB;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/Iot//PrefixHeader.pch";
@@ -954,6 +995,7 @@
 				ONLY_ACTIVE_ARCH = YES;
 				PRODUCT_BUNDLE_IDENTIFIER = DMTech.Iot;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;

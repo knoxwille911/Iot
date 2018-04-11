@@ -8,12 +8,18 @@
 
 #import "IotSpeechRecognizer.h"
 #import <Speech/Speech.h>
+#import <Accelerate/Accelerate.h>
 
-@interface IotSpeechRecognizer ()<SFSpeechRecognizerDelegate> {
+static const CGFloat kAudioFilterValue = 0.3f;
+static const CGFloat kMinAudioPowerValue = -100.f;
+
+@interface IotSpeechRecognizer () <SFSpeechRecognizerDelegate> {
     SFSpeechRecognizer *_speechRecognizer;
     SFSpeechAudioBufferRecognitionRequest *_recognitionRequest;
     SFSpeechRecognitionTask *_recognitionTask;
     AVAudioEngine *_audioEngine;
+    
+    CGFloat _audioPower;
 }
 
 @end
@@ -24,7 +30,7 @@
 
 - (instancetype)initWithInjection:(id<IotSpeechRecognizerInjection>)injection {
     if (self = [super init]) {
-        _speechRecognizer = [[SFSpeechRecognizer alloc] initWithLocale:[[NSLocale alloc] initWithLocaleIdentifier:@"en_US"]];
+        _speechRecognizer = [[SFSpeechRecognizer alloc] initWithLocale:[[NSLocale alloc] initWithLocaleIdentifier:@"en_EN"]];
         
         // Set speech recognizer delegate
         _speechRecognizer.delegate = self;
@@ -76,7 +82,7 @@
     // process if there's an error.
     _recognitionRequest = [[SFSpeechAudioBufferRecognitionRequest alloc] init];
     AVAudioInputNode *inputNode = _audioEngine.inputNode;
-    _recognitionRequest.shouldReportPartialResults = YES;
+    _recognitionRequest.shouldReportPartialResults = NO;
     _recognitionTask = [_speechRecognizer recognitionTaskWithRequest:_recognitionRequest resultHandler:^(SFSpeechRecognitionResult * _Nullable result, NSError * _Nullable error) {
         BOOL isFinal = NO;
         if (result) {
@@ -99,14 +105,39 @@
     
     // Sets the recording format
     AVAudioFormat *recordingFormat = [inputNode outputFormatForBus:0];
+    
     [inputNode installTapOnBus:0 bufferSize:1024 format:recordingFormat block:^(AVAudioPCMBuffer * _Nonnull buffer, AVAudioTime * _Nonnull when) {
         [_recognitionRequest appendAudioPCMBuffer:buffer];
+
+        [buffer setFrameLength:1024];
+        UInt32 inNumberFrames = buffer.frameLength;
+
+        if(buffer.format.channelCount > 0) {
+            Float32* samples = (Float32*)buffer.floatChannelData[0];
+            Float32 avgValue = 0;
+
+            vDSP_meamgv((Float32*)samples, 1, &avgValue, inNumberFrames);
+            _audioPower = (kAudioFilterValue*((avgValue==0)?kMinAudioPowerValue:20.0*log10f(avgValue))) + ((1-kAudioFilterValue)*_audioPower) ;
+        }
+        
+        if (self.delegate) {
+            dispatch_async(dispatch_get_main_queue(), ^{
+                [self.delegate recordingAudioPowerChanged:[self normalizedPowerValue:_audioPower]];
+            });
+        }
     }];
     
     // Starts the audio engine, i.e. it starts listening.
     [_audioEngine prepare];
     [_audioEngine startAndReturnError:&error];
+    
     NSLog(@"Say Something, I'm listening");
+}
+
+
+- (CGFloat)normalizedPowerValue:(CGFloat)value {
+    CGFloat normalizedValue = 1 - (value * 2 / kMinAudioPowerValue);
+    return normalizedValue;
 }
 
 

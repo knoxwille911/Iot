@@ -138,6 +138,28 @@
 }
 
 
+
++(UIColor *)conversationRecordReflectorViewTextColor {
+    return UIColorFromRGB(0xffffff);
+}
+
+
++(UIColor *)conversationRecordReflectorViewWaveColor {
+    return UIColorFromRGB(0x3f5f78);
+}
+
+
++(UIColor *)conversationRecordReflectorViewBorderColor {
+    return UIColorFromRGB(0x3f5f78);
+}
+
+
++(UIColor *)conversationRecordReflectorViewBackgroundColor {
+    return UIColorFromRGB(0x9fbfd6);
+}
+
+
+
 +(UIColor *)conversationDetailOutgoindBubbleBackgroundColor {
     return [self colorWithRedComponent:141 greenComponent:144 blueComponent:166 andAlpha:0.3];
 }
@@ -151,5 +173,6 @@
 +(UIColor *)conversationDetailSenderNameTitleColor {
     return UIColorFromRGB(0x6c6c79);
 }
+
 
 @end

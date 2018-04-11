@@ -10,6 +10,7 @@
 
 @protocol IotSpeechRecognizerDelegate
 
+-(void)recordingAudioPowerChanged:(CGFloat)audioPower;
 -(void)recognizedTextUpdated:(NSString *)recognizedText;
 
 @end

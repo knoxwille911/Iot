@@ -45,4 +45,9 @@
 +(UIColor *)conversationDetailIncomingBubbleBackgroundColor;
 +(UIColor *)conversationDetailSenderNameTitleColor;
 
++(UIColor *)conversationRecordReflectorViewTextColor;
++(UIColor *)conversationRecordReflectorViewWaveColor;
++(UIColor *)conversationRecordReflectorViewBorderColor;
++(UIColor *)conversationRecordReflectorViewBackgroundColor;
+
 @end

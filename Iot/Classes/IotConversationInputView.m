@@ -11,10 +11,8 @@
 #import "UIColor+SPColors.h"
 #import "UITextView+Placeholder.h"
 
-static NSString *kConversationSendButtonImageName = @"conversation_Button-paper-plane";
-static NSString *kConversationSendButtonImageNameDisable = @"Button-paper-plane-passive";
-
-static NSString *kConversationInputViewEmoticonButtonImageName = @"conversation_icon-smile";
+static NSString *kConversationSendButtonImageName = @"Button-sent";
+static NSString *kConversationSendButtonImageNameRecognition = @"Button-speech-recognition";
 
 static const UIEdgeInsets kConversationInpuViewTextViewInset = {5, 5, -5, 5};
 
@@ -24,6 +22,7 @@ static const UIEdgeInsets kConversationInpuViewEmoticonButtonInset = {0, 0, -5, 
 
 @interface IotConversationInputView() <HPGrowingTextViewDelegate> {
     NSMutableArray<NSLayoutConstraint *> *_bottomConstraints;
+    UILongPressGestureRecognizer *_longPress;
 }
 
 @property (weak, nonatomic) id<IotConversationInputViewItemViewModelDelegate> inputViewdelegate;
@@ -101,17 +100,22 @@ static const UIEdgeInsets kConversationInpuViewEmoticonButtonInset = {0, 0, -5, 
 }
 
 
+- (void)setLongPressEnabled:(BOOL)enabled {
+    _longPress.enabled = enabled;
+}
+
+
 -(void)addRightButton {
     self.rightButton = [UIButton buttonWithType:UIButtonTypeCustom];
     self.rightButton.translatesAutoresizingMaskIntoConstraints = NO;
     [self.rightButton setTitleColor:[UIColor clearColor] forState:UIControlStateNormal];
     [self.rightButton setTitleColor:[UIColor clearColor] forState:UIControlStateSelected];
-    [self.rightButton setImage:[UIImage imageNamed:kConversationSendButtonImageName] forState:UIControlStateNormal];
-    [self.rightButton setImage:[UIImage imageNamed:kConversationSendButtonImageNameDisable] forState:UIControlStateDisabled];
+    [self.rightButton setImage:[UIImage imageNamed:kConversationSendButtonImageNameRecognition] forState:UIControlStateNormal];
     [self.rightButton addTarget:self action:@selector(didPressRightButton:) forControlEvents:UIControlEventTouchUpInside];
     
-    UILongPressGestureRecognizer *longPress = [[UILongPressGestureRecognizer alloc] initWithTarget:self action:@selector(longPress:)];
-    [self.rightButton addGestureRecognizer:longPress];
+    _longPress = [[UILongPressGestureRecognizer alloc] initWithTarget:self action:@selector(longPress:)];
+    
+    [self.rightButton addGestureRecognizer:_longPress];
     
     self.rightButton.enabled = YES;
     [self addSubview:self.rightButton];

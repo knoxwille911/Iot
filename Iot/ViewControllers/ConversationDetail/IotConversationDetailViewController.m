@@ -11,6 +11,8 @@
 #import "IotSpeechRecognizer.h"
 #import "IotInjectorContainer.h"
 #import "UIColor+SPColors.h"
+#import "IotRecordReflectorViewer.h"
+#import "IotRecordReflectorView.h"
 #import "IotConversationDetailTableViewWrapperView.h"
 #import "IotConversationAnswerOutDTO.h"
 #import "IotConversationInputView.h"
@@ -67,6 +69,7 @@
 }
 
 
+
 -(void)addConversationView {
     _conversationWrapperView = [[IotConversationDetailTableViewWrapperView alloc] initWithFrame:CGRectZero];
     _conversationWrapperView.translatesAutoresizingMaskIntoConstraints = NO;
@@ -79,7 +82,9 @@
     [NSLayoutConstraint constraintWithItem:_conversationWrapperView attribute:NSLayoutAttributeRight relatedBy:NSLayoutRelationEqual toItem:self.view attribute:NSLayoutAttributeRight multiplier:1.0f constant:0.0f].active = YES;
 }
 
-#pragma mark IotConversationInputViewDelegate delegate
+
+#pragma mark - IotConversationInputViewDelegate
+
 
 -(void)sendTextMessage:(NSString *)textMessage {
     IotConversationAnswerOutDTO *conversationDTO = [IotConversationAnswerOutDTO new];
@@ -96,11 +101,13 @@
 
 
 -(void)sendButtonLongTapBegan {
+    [IotRecordReflectorViewer.sharedInstance showRecordReflectorViewInViewIfNeeded:self.view];
     [injectorContainer().speechRecognizerController startListening];
 }
 
 
 -(void)sendButtonLongTapEnded {
+    [IotRecordReflectorViewer.sharedInstance hideReflectorView];
     [injectorContainer().speechRecognizerController stopListening];
 }
 
@@ -109,10 +116,17 @@
     return [injectorContainer().uiManager tabbarController].tabBar.frame.size.height;
 }
 
-#pragma mark IotSpeechRecognizerDelegate delegate
+
+#pragma mark - IotSpeechRecognizerDelegate
+
 
 -(void)recognizedTextUpdated:(NSString *)recognizedText {
-    
+    [self sendTextMessage:recognizedText];
+}
+
+
+-(void)recordingAudioPowerChanged:(CGFloat)audioPower {
+    [IotRecordReflectorViewer.sharedInstance.reflectorView updateWaveWithValue:audioPower];
 }
 
 @end
