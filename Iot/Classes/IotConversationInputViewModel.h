@@ -17,6 +17,8 @@
 -(void)sendButtonLongTapBegan;
 -(void)sendButtonLongTapEnded;
 
+-(CGFloat)tabbarHeight;
+
 @end
 
 

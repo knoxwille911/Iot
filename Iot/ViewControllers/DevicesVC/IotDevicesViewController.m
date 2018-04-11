@@ -22,20 +22,35 @@
 
 @implementation IotDevicesViewController
 
+-(instancetype)init {
+    if (self = [super init]) {
+        [self createTableView];
+    }
+    return self;
+}
+
+
+-(void)createTableView {
+    _tableView = [[UITableView alloc] initWithFrame:CGRectZero style:UITableViewStyleGrouped];
+    _dataSource = [[IotDevicesTableViewDataSource alloc] initWithTableView:_tableView targetViewControler:self];
+    [_dataSource downloadData];
+}
+
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     
     self.view.backgroundColor = [UIColor deviceListControllerBackgroundColor];
     self.title = NSLocalizedString(@"Devices", @"Devices");
     
-    _tableView = [[UITableView alloc] initWithFrame:CGRectZero style:UITableViewStyleGrouped];
+    
     [_tableView registerClass:[IotDevicesTableViewBublCell class] forCellReuseIdentifier:NSStringFromClass([IotDevicesTableViewBublCell class])];
     [_tableView registerClass:[IotDevicesTableViewDeviceCell class] forCellReuseIdentifier:NSStringFromClass([IotDevicesTableViewDeviceCell class])];
     _tableView.translatesAutoresizingMaskIntoConstraints = NO;
     _tableView.backgroundColor = [UIColor clearColor];
     
     _tableView.delegate = self;
-    _dataSource = [[IotDevicesTableViewDataSource alloc] initWithTableView:_tableView targetViewControler:self];
+    
     _tableView.dataSource = _dataSource;
     _tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
     _tableView.indicatorStyle = UIScrollViewIndicatorStyleWhite;
@@ -47,7 +62,11 @@
     [self.view addSubview:_tableView];
     
     [self setupLayout];
-    
+}
+
+
+-(void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
     [_dataSource downloadAndRefreshData];
 }
 

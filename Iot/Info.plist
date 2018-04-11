@@ -20,6 +20,10 @@
 	<string>1</string>
 	<key>LSRequiresIPhoneOS</key>
 	<true/>
+	<key>NSMicrophoneUsageDescription</key>
+	<string>Iot app uses your microphone to record what you say, so watch what you say!</string>
+	<key>NSSpeechRecognitionUsageDescription</key>
+	<string>Iot app uses Speech recognition to transform your spoken words into text and then analyze the, so watch what you say!</string>
 	<key>UILaunchStoryboardName</key>
 	<string>LaunchScreen</string>
 	<key>UIMainStoryboardFile</key>
@@ -31,8 +35,6 @@
 	<key>UISupportedInterfaceOrientations</key>
 	<array>
 		<string>UIInterfaceOrientationPortrait</string>
-		<string>UIInterfaceOrientationLandscapeLeft</string>
-		<string>UIInterfaceOrientationLandscapeRight</string>
 	</array>
 	<key>UISupportedInterfaceOrientations~ipad</key>
 	<array>
@@ -41,8 +43,5 @@
 		<string>UIInterfaceOrientationLandscapeLeft</string>
 		<string>UIInterfaceOrientationLandscapeRight</string>
 	</array>
-    <key>NSMicrophoneUsageDescription</key>  <string>Iot app uses your microphone to record what you say, so watch what you say!</string>
-    
-    <key>NSSpeechRecognitionUsageDescription</key>  <string>Iot app uses Speech recognition to transform your spoken words into text and then analyze the, so watch what you say!</string>
 </dict>
 </plist>

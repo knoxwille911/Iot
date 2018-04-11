@@ -36,16 +36,16 @@
     UINavigationController *rootNavConversationVC = [[UINavigationController alloc] initWithRootViewController:rootConversationVC];
     rootNavConversationVC.navigationBar.topItem.title = @"";
     
-    UIImage *converastionImage = [UIImage imageNamed:@"tab-tests-inactive-icon"];
-    UIImage *converastionImageSel = [UIImage imageNamed:@"tab-tests-active-icon"];
+    UIImage *converastionImage = [UIImage imageNamed:@"tab-Ella-active-icon-inactive"];
+    UIImage *converastionImageSel = [UIImage imageNamed:@"tab-Ella-active-icon-active"];
     converastionImage = [converastionImage imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
     converastionImageSel = [converastionImageSel imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
     rootNavConversationVC.tabBarItem = [[UITabBarItem alloc] initWithTitle:NSLocalizedString(@"Ella", @"Ella") image:converastionImage selectedImage:converastionImageSel];
     
     IotDevicesViewController *devicesViewController = [[IotDevicesViewController alloc] init];
     UINavigationController *devicesNavVC = [[UINavigationController alloc] initWithRootViewController:devicesViewController];
-    UIImage *devicesImage = [UIImage imageNamed:@"tab-shedule-inactive-icon"];
-    UIImage *devicesImageSel = [UIImage imageNamed:@"tab-schedule-active-icon"];
+    UIImage *devicesImage = [UIImage imageNamed:@"tab-devices-icon-inactive"];
+    UIImage *devicesImageSel = [UIImage imageNamed:@"tab-devices-icon-active"];
     devicesImage = [devicesImage imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
     devicesImageSel = [devicesImageSel imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
     devicesNavVC.tabBarItem = [[UITabBarItem alloc] initWithTitle:NSLocalizedString(@"Devices", @"Devices") image:devicesImage selectedImage:devicesImageSel];
@@ -53,8 +53,8 @@
     IotNotificationsViewController *notificationsViewController = [[IotNotificationsViewController alloc] init];
     UINavigationController *notificationNavVC = [[UINavigationController alloc] initWithRootViewController:notificationsViewController];
     notificationNavVC.navigationBar.topItem.title = @"";
-    UIImage *notificationsImage = [UIImage imageNamed:@"tab-history-inactive-icon"];
-    UIImage *notificationsImageSel = [UIImage imageNamed:@"tab-history-active-icon"];
+    UIImage *notificationsImage = [UIImage imageNamed:@"tab-notification-icon-inactive"];
+    UIImage *notificationsImageSel = [UIImage imageNamed:@"tab-notification-icon-active"];
     notificationsImage = [notificationsImage imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
     notificationsImageSel = [notificationsImageSel imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
     notificationNavVC.tabBarItem = [[UITabBarItem alloc] initWithTitle:NSLocalizedString(@"Notification", @"Notification") image:notificationsImage selectedImage:notificationsImageSel];
@@ -110,6 +110,11 @@
     [alert addAction:yesButton];
     
     [viewController presentViewController:alert animated:YES completion:nil];
+}
+
+
+-(UITabBarController *)tabbarController {
+    return _tabBarController;
 }
 
 @end

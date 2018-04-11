@@ -559,18 +559,18 @@ static char UIViewKeyboardOpened;
             UITextField *textField = (UITextField *)subview;
             if ([textField respondsToSelector:@selector(setInputAccessoryView:)])
             {
-                UIView *nullView = [[UIView alloc] initWithFrame:CGRectZero];
-                nullView.backgroundColor = [UIColor clearColor];
-                textField.inputAccessoryView = nullView;
+//                UIView *nullView = [[UIView alloc] initWithFrame:CGRectZero];
+//                nullView.backgroundColor = [UIColor clearColor];
+//                textField.inputAccessoryView = nullView;
             }
         }
         else if ([subview isKindOfClass:[UITextView class]]) {
             UITextView *textView = (UITextView *)subview;
             if ([textView respondsToSelector:@selector(setInputAccessoryView:)] && [textView respondsToSelector:@selector(isEditable)] && textView.isEditable)
             {
-                UIView *nullView = [[UIView alloc] initWithFrame:CGRectZero];
-                nullView.backgroundColor = [UIColor clearColor];
-                textView.inputAccessoryView = nullView;
+//                UIView *nullView = [[UIView alloc] initWithFrame:CGRectZero];
+//                nullView.backgroundColor = [UIColor clearColor];
+//                textView.inputAccessoryView = nullView;
             }
         }
     }

@@ -27,6 +27,13 @@
 }
 
 
+-(void)downloadData {
+    [self getDataFromServerWithCompletion:^(NSArray<MTLModel *> *array) {
+        self.objects = array;
+    }];
+}
+
+
 -(void)downloadAndRefreshData {
     [self getDataFromServerWithCompletion:^(NSArray<MTLModel *> *array) {
         self.objects = array;

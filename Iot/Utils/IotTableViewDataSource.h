@@ -15,6 +15,7 @@ typedef void (^IotTableViewDataSourceHandler) (NSArray<MTLModel *> *array);
 -(instancetype)initWithTableView:(UITableView *)tableView targetViewControler:(UIViewController *)viewController;
 
 -(void)downloadAndRefreshData;
+-(void)downloadData;
 -(void)getDataFromServerWithCompletion:(IotTableViewDataSourceHandler)handler;
 
 @property (nonatomic, strong) NSArray<MTLModel *> *objects;

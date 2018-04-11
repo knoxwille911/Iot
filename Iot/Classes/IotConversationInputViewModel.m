@@ -157,7 +157,7 @@ static CGFloat kConversationInputViewHeight = 44;
     
     // get a rect for the textView frame
     CGRect containerFrame = self.inputView.frame;
-    containerFrame.origin.y = _targetViewController.view.bounds.size.height - (keyboardBounds.size.height + containerFrame.size.height);
+    containerFrame.origin.y = _targetViewController.view.bounds.size.height - (keyboardBounds.size.height + containerFrame.size.height) + [self.delegate tabbarHeight];
     // animations settings
     [UIView beginAnimations:nil context:NULL];
     [UIView setAnimationBeginsFromCurrentState:YES];

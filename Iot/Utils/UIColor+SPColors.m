@@ -15,6 +15,12 @@
 
 #pragma mark - Public
 
++ (UIColor *)colorWithRedComponent:(NSInteger)red greenComponent:(NSInteger)green blueComponent:(NSInteger)blue andAlpha:(CGFloat)alpha {
+    
+    return [UIColor colorWithRed:red/255.0f green:green/255.0f blue:blue/255.0f alpha:alpha];
+}
+
+
 + (UIColor *)colorFromHexString:(NSString *)hexString alpha:(CGFloat)alpha {
     unsigned rgbValue = 0;
     NSScanner *scanner = [NSScanner scannerWithString:hexString];
@@ -132,6 +138,7 @@
 }
 
 
+
 +(UIColor *)conversationRecordReflectorViewTextColor {
     return UIColorFromRGB(0xffffff);
 }
@@ -149,6 +156,22 @@
 
 +(UIColor *)conversationRecordReflectorViewBackgroundColor {
     return UIColorFromRGB(0x9fbfd6);
+}
+
+
+
++(UIColor *)conversationDetailOutgoindBubbleBackgroundColor {
+    return [self colorWithRedComponent:141 greenComponent:144 blueComponent:166 andAlpha:0.3];
+}
+
+
++(UIColor *)conversationDetailIncomingBubbleBackgroundColor {
+    return UIColorFromRGB(0x8d90a6);
+}
+
+
++(UIColor *)conversationDetailSenderNameTitleColor {
+    return UIColorFromRGB(0x6c6c79);
 }
 
 
