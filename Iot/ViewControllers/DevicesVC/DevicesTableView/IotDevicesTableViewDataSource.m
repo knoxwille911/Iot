@@ -121,8 +121,23 @@
 
 -(void)updateDeviceButtonTapped:(UIButton *)button {
     NSIndexPath *indexPath = [self indexForButton:button];
+    IotXDKDTO *device = [self deviceForTapButton:button];
     if (indexPath) {
-        [self updateBublAtIndex:indexPath];
+        __weak IotDevicesTableViewDataSource *weakSelf = self;
+        [injectorContainer().serverProvider getXDKdeviceWithID:device.XDKDeviceId withCompletion:^(NSArray<MTLModel *> *objects) {
+            if (objects.count) {
+                IotXDKDTO *updatedDevicesModel = (IotXDKDTO *)[objects firstObject];
+                device.XDKData.dataSensorLight = updatedDevicesModel.XDKData.dataSensorLight;
+                device.XDKData.dataSensorTemperature = updatedDevicesModel.XDKData.dataSensorTemperature;
+                device.XDKData.dataSensorPressure = updatedDevicesModel.XDKData.dataSensorPressure;
+                device.XDKData.dataSensorPressure = updatedDevicesModel.XDKData.dataSensorPressure;
+                device.XDKData.dataSensorHumidity = updatedDevicesModel.XDKData.dataSensorHumidity;
+                device.XDKData.dataSensorTimestamp = updatedDevicesModel.XDKData.dataSensorTimestamp;
+                dispatch_async(dispatch_get_main_queue(), ^{
+                    [weakSelf.tableView reloadRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationNone];
+                });
+            }
+        }];
     }
 }
 
@@ -243,6 +258,20 @@
         if ([mntModel isKindOfClass:[IotBulbDTO class]]) {
             IotBulbDTO *bulbModel = (IotBulbDTO *)mntModel;
             return bulbModel;
+        }
+        return nil;
+    }
+    return nil;
+}
+
+
+-(IotXDKDTO *)deviceForTapButton:(UIButton *)button {
+    NSIndexPath *indexPath = [self indexForButton:button];
+    if (indexPath) {
+        MTLModel *mntModel = self.objects[indexPath.row + indexPath.section];
+        if ([mntModel isKindOfClass:[IotXDKDTO class]]) {
+            IotXDKDTO *deviceModel = (IotXDKDTO *)mntModel;
+            return deviceModel;
         }
         return nil;
     }

@@ -16,7 +16,7 @@
 
 static const BOOL kIotUseOfflineDevicesList = NO;
 
-static const NSString *kIotServerProviderDeviceIDKey = @"deviceID";
+static const NSString *kIotServerProviderDeviceIDKey = @"deviceId";
 static const NSString *kIotServerProviderBulbIDKey = @"bulbId";
 
 static const NSString *kIotServerProviderBulbRedColor   = @"red";
@@ -184,10 +184,14 @@ static const NSString *kIotServerProviderConversationQuestionKey  = @"q";
 }
 
 
--(void)getXDKdeviceWithID:(NSString *)deviceID {
-    NSDictionary *params = [NSDictionary dictionaryWithObjectsAndKeys:kIotServerProviderDeviceIDKey, deviceID, nil];
+-(void)getXDKdeviceWithID:(NSString *)deviceID withCompletion:(IotServerProviderProtocolObjectsCompletionHandler)completion {
+    NSDictionary *params = [NSDictionary dictionaryWithObjectsAndKeys:deviceID, kIotServerProviderDeviceIDKey , nil];
     [self.injection.networkController get:[IotEndpoints getXDKdeviceEndpoint] withParams:params shouldIncludeAuthToken:YES withCompletionHandler:^(NSObject *response, NSError *error) {
-        
+        NSError *parseError;
+        IotXDKDTO *deviceDTO = [MTLJSONAdapter modelOfClass:[IotXDKDTO class] fromJSONDictionary:(NSDictionary *)response error:&parseError];
+        if (deviceDTO && completion) {
+            completion(@[deviceDTO]);
+        }
     }];
 }
 

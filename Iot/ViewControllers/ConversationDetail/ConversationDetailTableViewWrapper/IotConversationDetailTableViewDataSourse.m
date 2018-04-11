@@ -37,7 +37,7 @@
         BOOL needToScrollDown = [self isOffsetIsMax];
         
         [_tableView reloadData];
-        if (_dataController.messages.count > 0) {
+        if (_dataController.messages.count > 1) {
             if (needToScrollDown) {
                 [self updateBottomCollectionViewInsetWithAnimatin:NO];
             }
@@ -47,7 +47,19 @@
 
 
 - (void)updateBottomCollectionViewInsetWithAnimatin:(BOOL)animation {
-    [_tableView scrollToRowAtIndexPath:[NSIndexPath indexPathForRow:_dataController.messages.count - 1 inSection:0] atScrollPosition:UITableViewScrollPositionBottom animated:animation];
+    [_tableView scrollToRowAtIndexPath:[self indexPathForLastRow] atScrollPosition:UITableViewScrollPositionBottom animated:animation];
+}
+
+
+-(NSIndexPath*)indexPathForLastRow {
+    NSInteger lastSectionIndex = [_tableView numberOfSections] - 1;
+    
+    // Then grab the number of rows in the last section
+    NSInteger lastRowIndex = [_tableView numberOfRowsInSection:lastSectionIndex] - 1;
+    
+    // Now just construct the index path
+    NSIndexPath *pathToLastRow = [NSIndexPath indexPathForRow:lastRowIndex inSection:lastSectionIndex];
+    return pathToLastRow;
 }
 
 
