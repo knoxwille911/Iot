@@ -131,4 +131,25 @@
     return UIColorFromRGB(0x5b88ac);
 }
 
+
++(UIColor *)conversationRecordReflectorViewTextColor {
+    return UIColorFromRGB(0xffffff);
+}
+
+
++(UIColor *)conversationRecordReflectorViewWaveColor {
+    return UIColorFromRGB(0x3f5f78);
+}
+
+
++(UIColor *)conversationRecordReflectorViewBorderColor {
+    return UIColorFromRGB(0x3f5f78);
+}
+
+
++(UIColor *)conversationRecordReflectorViewBackgroundColor {
+    return UIColorFromRGB(0x9fbfd6);
+}
+
+
 @end

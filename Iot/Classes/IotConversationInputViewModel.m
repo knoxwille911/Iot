@@ -13,18 +13,16 @@
 static CGFloat kConversationInputViewHeight = 44;
 
 @interface IotConversationInputViewModel()<IotConversationInputViewItemViewModelDelegate> {
-
     BOOL _ignoreAutocomplete;
 }
 
 @property (nonatomic, weak) UIViewController *targetViewController;
 @property (nonatomic, weak) id<IotConversationInputViewDelegate> delegate;
 
-@property (nonatomic, assign) NSInteger selectionAssetsCount;
-@property (nonatomic, assign) BOOL rightButtonEnable;
-@property (nonatomic, assign) BOOL sendButtonEnable;
-
 @property (nonatomic, strong) NSMutableAttributedString *messageText;
+@property (nonatomic, assign) NSInteger selectionAssetsCount;
+@property (nonatomic, assign) BOOL recordButtonEnable;
+@property (nonatomic, assign) BOOL sendButtonEnable;
 
 @property (nonatomic, assign) CGRect inputViewRect;
 
@@ -57,13 +55,17 @@ static CGFloat kConversationInputViewHeight = 44;
                                                  name:UIKeyboardWillHideNotification
                                                object:nil];
     __weak IotConversationInputViewModel *weakSelf = self;
-
-    RAC(self, inputView.rightButton.enabled) = [RACSignal combineLatest:@[RACObserve(self, selectionAssetsCount),
-                                                                          RACObserve(self, messageText),
-                                                                          RACObserve(self, sendButtonEnable)]
-                                                                 reduce:^(NSNumber *selectedAssetsCount, NSAttributedString *inputText, NSNumber *sendButtonEnable) {
-                                                                     return @(inputText.length > 0 && sendButtonEnable.boolValue);
-                                                                 }];
+    
+    [[RACSignal combineLatest:@[RACObserve(self, selectionAssetsCount),
+                                RACObserve(self, messageText),
+                                RACObserve(self, sendButtonEnable)]
+                       reduce:^(NSNumber *selectedAssetsCount, NSAttributedString *inputText, NSNumber *sendButtonEnable) {
+                           return @(inputText.length > 0 && sendButtonEnable.boolValue);
+                       }] subscribeNext:^(id x) {
+                           [weakSelf.inputView setLongPressEnabled:![x boolValue]];
+                           UIImage *image = [UIImage imageNamed:[x boolValue] ? @"Button-sent" : @"Button-speech-recognition"];
+                           [weakSelf.inputView.rightButton setImage:image forState:UIControlStateNormal];
+                       }];
 }
 
 
@@ -120,7 +122,7 @@ static CGFloat kConversationInputViewHeight = 44;
         });
         if (self.messageText.length) {
             [self.delegate sendTextMessage:self.inputView.textView.text];
-//            [_delegate sendTextMessage:[_injection.emoticonsManager detectEmoticonsByByHashAndReplaceToCodes:self.messageText]];
+            //            [_delegate sendTextMessage:[_injection.emoticonsManager detectEmoticonsByByHashAndReplaceToCodes:self.messageText]];
             self.messageText = nil;
             self.messageText = [[NSMutableAttributedString alloc] init];
             self.inputView.textView.text = nil;
@@ -191,3 +193,4 @@ static CGFloat kConversationInputViewHeight = 44;
 }
 
 @end
+

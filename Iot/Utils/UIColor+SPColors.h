@@ -42,4 +42,9 @@
 +(UIColor *)conversationInputViewGalleryCellOverlayColor;
 +(UIColor *)conversationControllerBackgroundColor;
 
++(UIColor *)conversationRecordReflectorViewTextColor;
++(UIColor *)conversationRecordReflectorViewWaveColor;
++(UIColor *)conversationRecordReflectorViewBorderColor;
++(UIColor *)conversationRecordReflectorViewBackgroundColor;
+
 @end
